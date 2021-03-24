@@ -9,14 +9,35 @@ import javafx.fxml.FXMLLoader;
 
 
 public class Main extends Application {
+	
+	private static Stage stage;
+	
+	private static Scene mainScene;
+	private static Scene detailScene;
+	
 	@Override
 	public void start(Stage primaryStage) throws Exception{
+		stage = primaryStage;
 			
-		Pane root = FXMLLoader.load(getClass().getResource("Sample.fxml"));
-			Scene scene = new Scene(root);
-			primaryStage.setTitle("Banco de Midia");
-			primaryStage.setScene(scene);
+		primaryStage.setTitle("Banco de Midia");
+		Pane fxmlmain = FXMLLoader.load(getClass().getResource("TelaMain.fxml"));
+			mainScene = new Scene(fxmlmain);
+		
+		Pane fxmlcadastro = FXMLLoader.load(getClass().getResource("CadastroTela.fxml"));
+		   detailScene = new Scene(fxmlcadastro);
+		
+			primaryStage.setScene(mainScene);
 			primaryStage.show();
+	}
+	public static void changeScene(String scr) {
+		switch(scr) {
+		case "main":
+			stage.setScene(mainScene);
+			break;
+		case"details":
+			stage.setScene(detailScene);
+			break;
+		}
 	}
 	
 	public static void main(String[] args) {
