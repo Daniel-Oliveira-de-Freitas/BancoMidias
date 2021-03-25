@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PesquisaController">
    <children>
       <Pane layoutY="-8.0" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: #25294B;">
          <children>
@@ -20,7 +20,7 @@
                </image>
             </ImageView>
             <Button layoutX="605.0" layoutY="298.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" text="Button" />
-            <Button layoutX="827.0" layoutY="458.0" mnemonicParsing="false" text="voltar" />
+            <Button layoutX="827.0" layoutY="458.0" mnemonicParsing="false" onAction="#acaobotaovoltar" text="voltar" />
             <TextField layoutX="251.0" layoutY="298.0" prefHeight="25.0" prefWidth="354.0" />
             <Label layoutX="376.0" layoutY="334.0" prefHeight="17.0" prefWidth="170.0" text="Digite o nome ou código" textFill="#f8f5f5">
                <font>

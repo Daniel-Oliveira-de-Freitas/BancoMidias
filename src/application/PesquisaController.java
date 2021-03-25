@@ -1,7 +1,9 @@
 package application;
 
-public class CadastroController {
+public class PesquisaController {
+	
 	public void acaobotaovoltar(){
 		Main.changeScene("main");
-	}
-	}
+}
+
+}

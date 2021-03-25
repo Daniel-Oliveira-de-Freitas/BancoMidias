@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #25294B;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CadastroController">
+<BorderPane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #25294B;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <center>
       <Pane prefHeight="254.0" prefWidth="622.0" BorderPane.alignment="CENTER">
          <children>

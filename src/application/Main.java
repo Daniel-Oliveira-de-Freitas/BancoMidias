@@ -16,8 +16,6 @@ public class Main extends Application {
 	private static Scene cadastroScene;
 	private static Scene pesquisaScene;
 
-
-	
 	@SuppressWarnings("unused")
 	@Override
 	public void start(Stage primaryStage) throws Exception{
@@ -36,6 +34,7 @@ public class Main extends Application {
 			primaryStage.setScene(mainScene);
 			primaryStage.show();
 	}
+	
 	public static void changeScene(String scr) {
 		switch(scr) {
 		case "main":
