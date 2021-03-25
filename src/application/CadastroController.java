@@ -74,8 +74,7 @@ public class CadastroController {
 		resetaPosicao();
 	
 	}else if(musica.isSelected()) {
-		resetaPosicao();
-		
+		resetaPosicao();	
 	}
 	}
 
