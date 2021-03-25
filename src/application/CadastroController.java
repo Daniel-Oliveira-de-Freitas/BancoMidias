@@ -1,7 +1,12 @@
 package application;
 
 public class CadastroController {
-	public void acaobotao(){
-		Main.changeScene("details");
+	public void acaobotaocadastro(){
+		Main.changeScene("cadastro");
 	}
+
+	
+	public void acaobotaopesquisa(){
+		Main.changeScene("pesquisar");
+}
 }

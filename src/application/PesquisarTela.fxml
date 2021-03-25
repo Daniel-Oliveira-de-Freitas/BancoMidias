@@ -10,12 +10,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1">
+<AnchorPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane layoutY="-8.0" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: #25294B;">
          <children>
-            <ImageView fitHeight="816.0" fitWidth="728.0" layoutX="276.0" layoutY="-119.0">
+            <ImageView fitHeight="816.0" fitWidth="728.0" layoutX="274.0" layoutY="-119.0">
                <image>
                   <Image url="@../../../../../Creative%20Cloud%20Files/Retângulo%2038.png" />
                </image>
@@ -39,19 +38,19 @@
                   <Image url="@../../imagens/lupa.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="121.0" fitWidth="315.0" layoutX="293.0" layoutY="124.0">
+            <ImageView fitHeight="121.0" fitWidth="315.0" layoutX="280.0" layoutY="124.0">
                <image>
-                  <Image url="@../../../../../Creative%20Cloud%20Files/NoPath%20-%20Copia%20(3).png" />
+                  <Image url="@../../imagens/filmes.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="132.0" fitWidth="200.0" layoutX="51.0" layoutY="118.0">
+            <ImageView fitHeight="132.0" fitWidth="200.0" layoutX="38.0" layoutY="118.0">
                <image>
-                  <Image url="@../../../../../Creative%20Cloud%20Files/NoPath.png" />
+                  <Image url="@../../imagens/fotos.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="133.0" fitWidth="200.0" layoutX="663.0" layoutY="118.0">
+            <ImageView fitHeight="133.0" fitWidth="200.0" layoutX="642.0" layoutY="118.0">
                <image>
-                  <Image url="@../../../../../Creative%20Cloud%20Files/NoPath%20-%20Copia%20(2).png" />
+                  <Image url="@../../imagens/livros.png" />
                </image>
             </ImageView>
          </children>

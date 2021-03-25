@@ -13,8 +13,12 @@ public class Main extends Application {
 	private static Stage stage;
 	
 	private static Scene mainScene;
-	private static Scene detailScene;
+	private static Scene cadastroScene;
+	private static Scene pesquisaScene;
+
+
 	
+	@SuppressWarnings("unused")
 	@Override
 	public void start(Stage primaryStage) throws Exception{
 		stage = primaryStage;
@@ -24,7 +28,10 @@ public class Main extends Application {
 			mainScene = new Scene(fxmlmain);
 		
 		Pane fxmlcadastro = FXMLLoader.load(getClass().getResource("CadastroTela.fxml"));
-		   detailScene = new Scene(fxmlcadastro);
+		   cadastroScene = new Scene(fxmlcadastro);
+		   
+	    Pane fxmlpesquisa = FXMLLoader.load(getClass().getResource("pesquisarTela.fxml"));
+		   pesquisaScene = new Scene(fxmlpesquisa);   
 		
 			primaryStage.setScene(mainScene);
 			primaryStage.show();
@@ -34,8 +41,12 @@ public class Main extends Application {
 		case "main":
 			stage.setScene(mainScene);
 			break;
-		case"details":
-			stage.setScene(detailScene);
+		case"cadastro":
+			stage.setScene(cadastroScene);
+			break;
+			
+		case"pesquisar":
+			stage.setScene(pesquisaScene);
 			break;
 		}
 	}
