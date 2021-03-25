@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -13,7 +14,7 @@
       <Pane layoutX="-187.0" layoutY="-189.0" prefHeight="200.0" prefWidth="200.0" />
       <TextField layoutX="13.0" layoutY="27.0" />
       <Label layoutX="14.0" layoutY="6.0" text="Caminho do arquivo" textFill="WHITE" />
-      <TextField layoutX="13.0" layoutY="82.0" />
+      <TextField fx:id="titulo" layoutX="13.0" layoutY="82.0" />
       <Label layoutX="14.0" layoutY="61.0" text="Título" textFill="WHITE" />
       <TextField layoutX="12.0" layoutY="139.0" />
       <Label layoutX="13.0" layoutY="118.0" text="Descrição" textFill="WHITE" />
@@ -30,10 +31,13 @@
       <TextField layoutX="195.0" layoutY="82.0" />
       <Label layoutX="196.0" layoutY="61.0" text="Ano" textFill="WHITE" />
       <Button layoutX="642.0" layoutY="360.0" mnemonicParsing="false" onAction="#acaobotaovoltar" prefHeight="26.0" prefWidth="58.0" text="Voltar" />
-      <Button layoutX="443.0" layoutY="204.0" mnemonicParsing="false" onAction="#acaobotaosalvar" prefHeight="50.0" prefWidth="176.0" style="-fx-background-color: #4B83F2;" text="Salvar Mídia" textFill="WHITE" />
-      <RadioButton layoutX="434.0" layoutY="156.0" mnemonicParsing="false" text="Foto" textFill="WHITE" />
-      <RadioButton layoutX="504.0" layoutY="156.0" mnemonicParsing="false" text="Música" textFill="WHITE" />
-      <RadioButton layoutX="577.0" layoutY="156.0" mnemonicParsing="false" text="Filme" textFill="WHITE" />
+      <Button layoutX="443.0" layoutY="204.0" mnemonicParsing="false" onAction="#acaobotaosalvar" prefHeight="50.0" prefWidth="176.0" style="-fx-background-color: #4B83F2; -fx-background-radius: 15;" text="Salvar Mídia" textFill="WHITE" />
+      <RadioButton layoutX="434.0" layoutY="156.0" mnemonicParsing="false" text="Foto" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="TipoMidia" />
+         </toggleGroup></RadioButton>
+      <RadioButton layoutX="504.0" layoutY="156.0" mnemonicParsing="false" text="Música" textFill="WHITE" toggleGroup="$TipoMidia" />
+      <RadioButton layoutX="577.0" layoutY="156.0" mnemonicParsing="false" text="Filme" textFill="WHITE" toggleGroup="$TipoMidia" />
       <Label layoutX="431.0" layoutY="100.0" prefHeight="35.0" prefWidth="200.0" text="Escolha sua Mídia:" textFill="WHITE">
          <font>
             <Font size="24.0" />
