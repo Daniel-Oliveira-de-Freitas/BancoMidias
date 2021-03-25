@@ -12,9 +12,9 @@
    <center>
       <Pane prefHeight="254.0" prefWidth="622.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="674.0" fitWidth="494.0" layoutX="407.0" layoutY="-100.0">
+            <ImageView fitHeight="725.0" fitWidth="581.0" layoutX="327.0" layoutY="-117.0">
                <image>
-                  <Image url="@../../imagens/rolo%20filme.png" />
+                  <Image url="@../../../../../Creative%20Cloud%20Files/rolo%20filme.png" />
                </image>
             </ImageView>
             <Button layoutX="219.0" layoutY="231.0" mnemonicParsing="false" onAction="#acaobotaoeditar" prefHeight="43.0" prefWidth="102.0" text="Editar" />

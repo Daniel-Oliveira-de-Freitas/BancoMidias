@@ -5,13 +5,23 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="398.0" prefWidth="715.0" style="-fx-background-color: #25294B;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CadastroController">
    <children>
-      <Pane layoutX="-187.0" layoutY="-189.0" prefHeight="200.0" prefWidth="200.0" />
+      <Pane prefHeight="398.0" prefWidth="715.0">
+         <children>
+            <ImageView fitHeight="688.0" fitWidth="750.0" layoutX="140.0" layoutY="-133.0">
+               <image>
+                  <Image url="@../../../../../Creative%20Cloud%20Files/Retângulo%2038.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
       <TextField fx:id="caminhoarquivo" layoutX="13.0" layoutY="27.0" />
       <Label fx:id="caminhoarquivoid" layoutX="14.0" layoutY="6.0" text="Caminho do arquivo" textFill="WHITE" />
       <TextField fx:id="titulo" layoutX="13.0" layoutY="82.0" />
