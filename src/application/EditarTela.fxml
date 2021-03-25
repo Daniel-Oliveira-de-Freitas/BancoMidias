@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EditaController">
+   <children>
+      <Pane prefHeight="386.0" prefWidth="639.0" style="-fx-background-color: #25294B;">
+         <children>
+            <ImageView fitHeight="723.0" fitWidth="626.0" layoutX="119.0" layoutY="-107.0">
+               <image>
+                  <Image url="@../../../../../Creative%20Cloud%20Files/Retângulo%2038.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="229.0" layoutY="15.0" prefHeight="70.0" prefWidth="181.0" text="Editar" textFill="#f8f8f8">
+               <font>
+                  <Font name="Modern No. 20" size="64.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="99.0" text="Escolha seu tipo de midia:" textFill="#f5f5f5">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="558.0" layoutY="349.0" mnemonicParsing="false" onAction="#acaobotaovoltar" prefHeight="25.0" prefWidth="69.0" text="Voltar" />
+            <RadioButton layoutX="27.0" layoutY="143.0" mnemonicParsing="false" text="Foto" textFill="#f5f5f5" />
+            <RadioButton layoutX="85.0" layoutY="143.0" mnemonicParsing="false" text="Música" textFill="#f5f5f5" />
+            <RadioButton layoutX="158.0" layoutY="143.0" mnemonicParsing="false" text="Filme" textFill="#f5f5f5" />
+            <TextField layoutX="260.0" layoutY="119.0" />
+            <Label layoutX="261.0" layoutY="98.0" text="Caminho do arquivo" textFill="WHITE" />
+            <TextField layoutX="260.0" layoutY="174.0" />
+            <Label layoutX="261.0" layoutY="153.0" text="Título" textFill="WHITE" />
+            <TextField layoutX="259.0" layoutY="231.0" />
+            <Label layoutX="260.0" layoutY="210.0" text="Descrição" textFill="WHITE" />
+            <TextField layoutX="259.0" layoutY="287.0" />
+            <Label layoutX="260.0" layoutY="266.0" text="Genêro" textFill="WHITE" />
+            <TextField layoutX="260.0" layoutY="342.0" />
+            <TextField layoutX="447.0" layoutY="120.0" />
+            <Label layoutX="443.0" layoutY="99.0" text="Autores" textFill="WHITE" />
+            <TextField layoutX="448.0" layoutY="173.0" />
+            <Label layoutX="444.0" layoutY="152.0" text="Interpetres" textFill="WHITE" />
+            <Label layoutX="240.0" layoutY="321.0" text="Idioma" textFill="WHITE" />
+            <TextField layoutX="447.0" layoutY="229.0" />
+            <Label layoutX="443.0" layoutY="208.0" text="Duração" textFill="WHITE" />
+            <TextField layoutX="448.0" layoutY="287.0" />
+            <Label layoutX="444.0" layoutY="266.0" text="Ano" textFill="WHITE" />
+            <Button layoutX="24.0" layoutY="283.0" mnemonicParsing="false" onAction="#acaobotaosalvar" prefHeight="50.0" prefWidth="176.0" style="-fx-background-color: #4B83F2;" text="Salvar Mídia" textFill="WHITE" />
+            <TextField layoutX="9.0" layoutY="216.0" prefHeight="25.0" prefWidth="181.0" />
+            <Label layoutX="42.0" layoutY="190.0" prefHeight="17.0" prefWidth="170.0" text="Digite o nome ou código" textFill="#f8f5f5">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="190.0" layoutY="216.0">
+               <image>
+                  <Image url="@../../imagens/lupa.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

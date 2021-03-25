@@ -30,7 +30,7 @@
       <TextField layoutX="195.0" layoutY="82.0" />
       <Label layoutX="196.0" layoutY="61.0" text="Ano" textFill="WHITE" />
       <Button layoutX="642.0" layoutY="360.0" mnemonicParsing="false" onAction="#acaobotaovoltar" prefHeight="26.0" prefWidth="58.0" text="Voltar" />
-      <Button layoutX="443.0" layoutY="204.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="176.0" style="-fx-background-color: #4B83F2;" text="Salvar Mídia" textFill="WHITE" />
+      <Button layoutX="443.0" layoutY="204.0" mnemonicParsing="false" onAction="#acaobotaosalvar" prefHeight="50.0" prefWidth="176.0" style="-fx-background-color: #4B83F2;" text="Salvar Mídia" textFill="WHITE" />
       <RadioButton layoutX="434.0" layoutY="156.0" mnemonicParsing="false" text="Foto" textFill="WHITE" />
       <RadioButton layoutX="504.0" layoutY="156.0" mnemonicParsing="false" text="Música" textFill="WHITE" />
       <RadioButton layoutX="577.0" layoutY="156.0" mnemonicParsing="false" text="Filme" textFill="WHITE" />

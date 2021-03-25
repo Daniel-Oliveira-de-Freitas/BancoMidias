@@ -17,7 +17,7 @@
                   <Image url="@../../imagens/rolo%20filme.png" />
                </image>
             </ImageView>
-            <Button layoutX="219.0" layoutY="231.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="102.0" text="Editar" />
+            <Button layoutX="219.0" layoutY="231.0" mnemonicParsing="false" onAction="#acaobotaoeditar" prefHeight="43.0" prefWidth="102.0" text="Editar" />
             <Button layoutX="370.0" layoutY="231.0" mnemonicParsing="false" onAction="#acaobotaopesquisa" prefHeight="43.0" prefWidth="102.0" text="Pesquisar" />
             <Button layoutX="511.0" layoutY="231.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="102.0" text="Exibir" />
             <Button layoutX="660.0" layoutY="231.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="102.0" text="Excluir" />

@@ -1,6 +1,6 @@
 package application;
 
-public class CadastroController {
+public class EditaController {
 	public void acaobotaovoltar(){
 		Main.changeScene("main");
 	}
@@ -8,4 +8,4 @@ public class CadastroController {
 	public void acaobotaosalvar(){
 		Main.changeScene("main");
 	}
-	}
+}

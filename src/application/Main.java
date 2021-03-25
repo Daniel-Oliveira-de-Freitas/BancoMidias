@@ -14,6 +14,7 @@ public class Main extends Application {
 	
 	private static Scene mainScene;
 	private static Scene cadastroScene;
+	private static Scene editaScene;
 	private static Scene pesquisaScene;
 
 	@SuppressWarnings("unused")
@@ -26,7 +27,10 @@ public class Main extends Application {
 			mainScene = new Scene(fxmlmain);
 		
 		Pane fxmlcadastro = FXMLLoader.load(getClass().getResource("CadastroTela.fxml"));
-		   cadastroScene = new Scene(fxmlcadastro);
+			   cadastroScene = new Scene(fxmlcadastro);	
+			
+		Pane fxmledita = FXMLLoader.load(getClass().getResource("EditarTela.fxml"));
+		   editaScene = new Scene(fxmledita);
 		   
 	    Pane fxmlpesquisa = FXMLLoader.load(getClass().getResource("pesquisarTela.fxml"));
 		   pesquisaScene = new Scene(fxmlpesquisa);   
@@ -42,6 +46,10 @@ public class Main extends Application {
 			break;
 		case"cadastro":
 			stage.setScene(cadastroScene);
+			break;
+			
+		case"editar":
+			stage.setScene(editaScene);
 			break;
 			
 		case"pesquisar":
