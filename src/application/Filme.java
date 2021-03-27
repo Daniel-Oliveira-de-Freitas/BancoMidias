@@ -9,15 +9,19 @@ package application;
 	private String duracao;
 	private String ano;
 
+<<<<<<< HEAD
 	public Filme(String t, String genero, String idioma, String diretor, String atoresPrincipais, String duracao, String ano) {
 	    super(t);
+=======
+	public Filme( String caminhoArquivo,String titulo,String descricao, String genero, String idioma, String diretor, String atoresPrincipais, String duracao, String ano) {
+		super(caminhoArquivo, titulo, descricao);
+>>>>>>> e5d181046e6cb75559ba9727b9240479310cf34f
 		this.genero = genero;
 		this.idioma = idioma;
 		this.diretor = diretor;
 		this.atoresPrincipais = atoresPrincipais;
 		this.duracao = duracao;
 		this.ano = ano;
-	
 	}
 	
 	public String getGenero() {

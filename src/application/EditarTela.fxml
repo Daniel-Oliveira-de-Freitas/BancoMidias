@@ -67,6 +67,7 @@
                   <Image url="@../../imagens/lupa.jpg" />
                </image>
             </ImageView>
+            <Button layoutX="533.0" layoutY="119.0" mnemonicParsing="false" onAction="#EscolhaCaminho" prefHeight="25.0" prefWidth="26.0" text="Button" />
          </children>
       </Pane>
    </children>
