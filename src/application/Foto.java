@@ -1,52 +1,21 @@
 package application;
 
-public class Foto {
-	private String caminhoArquivo;
-	private String titulo;
-	private String descricao;
+public class Foto extends Midia {
+	
 	private String fotografo;
 	private String pessoas;
 	private String local;
 	private String data;
 	
-	public Foto(String caminhoArquivo, String titulo, String descricao, String fotografo, String pessoas, String data) {
-		this.caminhoArquivo = caminhoArquivo;
-		this.titulo = titulo;
-		this.descricao = descricao;
+	public Foto(String t,String fotografo, String pessoas, String data) {
+		super(caminhoArquivo, titulo, descricao);
 		this.fotografo = fotografo;
 		this.pessoas = pessoas;
 		this.data = data;
 		
 	}
 	
-	public Foto(String titulo, String fotografo) {
-		this.titulo = titulo;
-		this.fotografo = fotografo;
-	}
 	
-	public String getCaminhoArquivo() {
-		return caminhoArquivo;
-	}
-	
-	public void setCaminhoArquivo(String caminhoArquivo) {
-		this.caminhoArquivo = caminhoArquivo;
-	}
-	
-	public String getTitulo() {
-		return titulo;
-	}
-	
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
-	
-	public String getDescricao() {
-		return descricao;
-	}
-	
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
 	
 	public String getFotografo() {
 		return fotografo;
