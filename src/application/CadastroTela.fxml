@@ -20,6 +20,7 @@
                   <Image url="@../../../../../Creative%20Cloud%20Files/Retângulo%2038.png" />
                </image>
             </ImageView>
+            <Button layoutX="165.0" layoutY="27.0" mnemonicParsing="false" onAction="#EscolhaCaminho" prefHeight="25.0" prefWidth="22.0" text="..." />
          </children>
       </Pane>
       <TextField fx:id="caminhoarquivo" layoutX="13.0" layoutY="27.0" />

@@ -8,16 +8,8 @@ public class Midia {
 	public Midia(String caminhoArquivo, String titulo, String descricao ) {
 		this.caminhoArquivo = caminhoArquivo;
 		this.titulo = titulo;
-		this.descricao = descricao;
-		
+		this.descricao = descricao;		
 	}
-	
-	public Midia(String t) {
-		this.titulo = t;
-	}
-	
-	
-	
 	
 	public String getCaminhoArquivo() {
 		return caminhoArquivo;
