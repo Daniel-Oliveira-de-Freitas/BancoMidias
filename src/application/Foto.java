@@ -7,13 +7,11 @@ public class Foto extends Midia {
 	private String local;
 	private String data;
 	
-<<<<<<< HEAD
 	public Foto(String t, String fotografo, String pessoas, String local, String data) {
 		super(t);
-=======
-	public Foto(String caminhoArquivo,String titulo,String descricao,String fotografo, String pessoas, String data) {
+}
+	public Foto(String caminhoArquivo,String titulo,String descricao,String fotografo, String pessoas, String local, String data) {
 		super(caminhoArquivo, titulo, descricao);
->>>>>>> e5d181046e6cb75559ba9727b9240479310cf34f
 		this.fotografo = fotografo;
 		this.pessoas = pessoas;
 		this.local = local;

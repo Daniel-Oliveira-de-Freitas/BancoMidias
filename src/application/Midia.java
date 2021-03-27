@@ -5,18 +5,16 @@ package application;
 	private String titulo;
 	private String descricao;
 
-<<<<<<< HEAD
 	 Midia(String t ) {
 		caminhoArquivo = "";
 		titulo = t;
 		descricao = "";
+	 }
 		
-=======
 	public Midia(String caminhoArquivo, String titulo, String descricao ) {
 		this.caminhoArquivo = caminhoArquivo;
 		this.titulo = titulo;
 		this.descricao = descricao;		
->>>>>>> e5d181046e6cb75559ba9727b9240479310cf34f
 	}
 	
 	public String getCaminhoArquivo() {
