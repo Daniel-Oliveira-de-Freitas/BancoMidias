@@ -10,9 +10,9 @@
 
 <BorderPane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #25294B;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <center>
-      <Pane prefHeight="254.0" prefWidth="622.0" BorderPane.alignment="CENTER">
+      <Pane BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="725.0" fitWidth="581.0" layoutX="327.0" layoutY="-117.0">
+            <ImageView fitHeight="734.0" fitWidth="648.0" layoutX="260.0" layoutY="-117.0">
                <image>
                   <Image url="@../../../../../Creative%20Cloud%20Files/rolo%20filme.png" />
                </image>
