@@ -1,23 +1,16 @@
 package application;
 
-public class Midia {
+ public abstract class Midia {
 	private String caminhoArquivo;
 	private String titulo;
 	private String descricao;
 
-	public Midia(String caminhoArquivo, String titulo, String descricao ) {
-		this.caminhoArquivo = caminhoArquivo;
-		this.titulo = titulo;
-		this.descricao = descricao;
+	 Midia(String t ) {
+		caminhoArquivo = "";
+		titulo = t;
+		descricao = "";
 		
 	}
-	
-	public Midia(String t) {
-		this.titulo = t;
-	}
-	
-	
-	
 	
 	public String getCaminhoArquivo() {
 		return caminhoArquivo;
@@ -41,6 +34,10 @@ public class Midia {
 	
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+	
+	public String toString() {
+		return "Destino: " + caminhoArquivo + "Titulo: " + titulo + "Descricao: "+ descricao;
 	}
 
 }

@@ -7,10 +7,11 @@ public class Foto extends Midia {
 	private String local;
 	private String data;
 	
-	public Foto(String t,String fotografo, String pessoas, String data) {
-		super(caminhoArquivo, titulo, descricao);
+	public Foto(String t, String fotografo, String pessoas, String local, String data) {
+		super(t);
 		this.fotografo = fotografo;
 		this.pessoas = pessoas;
+		this.local = local;
 		this.data = data;
 		
 	}
@@ -49,7 +50,10 @@ public class Foto extends Midia {
 		this.data = data;
 	}
 	
-	
+	public String toString() {
+		return (super.toString()+ "Fotografo: "+ fotografo + "Pessoas:"+ pessoas+"\n"+
+								  "Local: " + local + "Data: " +data);
+	}
 	
 	
 	

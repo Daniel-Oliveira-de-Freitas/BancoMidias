@@ -1,20 +1,18 @@
 package application;
 
-public class Musica extends Filme{
+public class Musica extends Filme {
 	
 	
 	private String autores;
 	private String interpretes;
 	
 	
-	
-
-	public Musica(String f,String genero, String idioma, String autores, String interpretes, String duracao, String ano, String diretor, String atoresPrincipais) {
-		super(f);
+	public Musica(String t, String diretor, String atoresPrincipais, String genero, String caminhoArquivo, String titulo, String descricao, String duracao, String ano) {
+	    super(t, caminhoArquivo, titulo, descricao, genero, duracao, ano);
 		
-		this.autores = autores;
-		this.interpretes = interpretes;
-	}
+		this.autores = diretor;
+		this.interpretes = atoresPrincipais;
+	}	
 	
 	public String getAutores() {
 		return autores;
@@ -30,6 +28,10 @@ public class Musica extends Filme{
 	
 	public void setInterpretes(String interpretes) {
 		this.interpretes = interpretes;
+	}
+	
+	public String toString() {
+		return (super.toString() + "Autores: "+ autores + "Interpretes: "+ interpretes);
 	}
 
 	
