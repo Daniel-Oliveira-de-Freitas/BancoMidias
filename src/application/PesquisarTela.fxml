@@ -30,7 +30,7 @@
                </font>
             </Label>
             <ButtonBar layoutX="579.0" layoutY="353.0" />
-            <Label layoutX="288.0" layoutY="16.0" prefHeight="69.0" prefWidth="253.0" text="Pesquisar" textFill="WHITE">
+            <Label layoutX="288.0" layoutY="16.0" prefHeight="91.0" prefWidth="295.0" text="Pesquisar" textFill="WHITE">
                <font>
                   <Font name="Modern No. 20" size="64.0" />
                </font>

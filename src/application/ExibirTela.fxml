@@ -2,15 +2,16 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="402.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="402.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ExibirController">
    <children>
       <Pane prefHeight="402.0" prefWidth="656.0" style="-fx-background-color: #87CEFA;">
          <children>
@@ -20,28 +21,26 @@
                </font>
             </Label>
             <TextField layoutX="187.0" layoutY="95.0" prefHeight="25.0" prefWidth="283.0" />
-            <RadioButton layoutX="197.0" layoutY="128.0" mnemonicParsing="false" text="Foto">
+            <RadioButton fx:id="fotoid" layoutX="197.0" layoutY="128.0" mnemonicParsing="false" text="Foto">
                <toggleGroup>
-                  <ToggleGroup fx:id="TipoMidia" />
+                  <ToggleGroup fx:id="TipoMidiaExibir" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton layoutX="261.0" layoutY="128.0" mnemonicParsing="false" text="Música">
-               <toggleGroup>
-                  <ToggleGroup fx:id="TipoMidia1" />
-               </toggleGroup>
-            </RadioButton>
-            <RadioButton layoutX="340.0" layoutY="128.0" mnemonicParsing="false" text="Filme">
-               <toggleGroup>
-                  <ToggleGroup fx:id="TipoMidia2" />
-               </toggleGroup>
-            </RadioButton>
-            <RadioButton layoutX="406.0" layoutY="128.0" mnemonicParsing="false" text="Todos">
-               <toggleGroup>
-                  <ToggleGroup fx:id="TipoMidia11" />
-               </toggleGroup>
-            </RadioButton>
-            <ListView fx:id="exibeMidias" layoutX="12.0" layoutY="161.0" prefHeight="199.0" prefWidth="632.0" />
+            <RadioButton layoutX="261.0" layoutY="128.0" mnemonicParsing="false" text="Música" toggleGroup="$TipoMidiaExibir" />
+            <RadioButton fx:id="filmeid" layoutX="340.0" layoutY="128.0" mnemonicParsing="false" text="Filme" toggleGroup="$TipoMidiaExibir" />
+            <RadioButton layoutX="406.0" layoutY="128.0" mnemonicParsing="false" text="Todos" toggleGroup="$TipoMidiaExibir" />
             <Button layoutX="575.0" layoutY="363.0" mnemonicParsing="false" onAction="#acaobotaovoltar" prefHeight="25.0" prefWidth="69.0" text="Voltar" />
+            <TableView fx:id="tabela" layoutX="14.0" layoutY="161.0" prefHeight="200.0" prefWidth="632.0">
+              <columns>
+                <TableColumn fx:id="localarquivo" prefWidth="132.0000638961792" text="Caminho do arquivo" />
+                <TableColumn fx:id="titulo" prefWidth="88.79998779296875" text="Titulo" />
+                  <TableColumn fx:id="desc" prefWidth="91.19999694824219" text="Descrição" />
+                  <TableColumn fx:id="fotografo" prefWidth="88.0" text="Fotógrafo" />
+                  <TableColumn fx:id="pessoas" prefWidth="76.800048828125" text="Pessoas" />
+                  <TableColumn fx:id="local" prefWidth="82.39996337890625" text="Local" />
+                  <TableColumn fx:id="data" prefWidth="70.4000244140625" text="Data" />
+              </columns>
+            </TableView>
          </children>
       </Pane>
    </children>

@@ -10,17 +10,17 @@
 
 <BorderPane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #25294B;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <center>
-      <Pane prefHeight="254.0" prefWidth="622.0" BorderPane.alignment="CENTER">
+      <Pane BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="674.0" fitWidth="494.0" layoutX="407.0" layoutY="-100.0">
+            <ImageView fitHeight="734.0" fitWidth="648.0" layoutX="260.0" layoutY="-117.0">
                <image>
-                  <Image url="@../../imagens/rolo%20filme.png" />
+                  <Image url="@../../../../../Creative%20Cloud%20Files/rolo%20filme.png" />
                </image>
             </ImageView>
             <Button layoutX="219.0" layoutY="231.0" mnemonicParsing="false" onAction="#acaobotaoeditar" prefHeight="43.0" prefWidth="102.0" text="Editar" />
             <Button layoutX="370.0" layoutY="231.0" mnemonicParsing="false" onAction="#acaobotaopesquisa" prefHeight="43.0" prefWidth="102.0" text="Pesquisar" />
-            <Button layoutX="511.0" layoutY="231.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="102.0" text="Exibir" />
-            <Button layoutX="660.0" layoutY="231.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="102.0" text="Excluir" />
+            <Button layoutX="511.0" layoutY="231.0" mnemonicParsing="false" onAction="#acaobotaoexibir" prefHeight="43.0" prefWidth="102.0" text="Exibir" />
+            <Button layoutX="660.0" layoutY="231.0" mnemonicParsing="false" onAction="#acaobotaoexcluir" prefHeight="43.0" prefWidth="102.0" text="Excluir" />
             <Button layoutX="52.0" layoutY="231.0" mnemonicParsing="false" onAction="#acaobotaocadastro" prefHeight="43.0" prefWidth="102.0" text="Cadastrar" />
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="95.0" layoutY="32.0" prefHeight="115.0" prefWidth="586.0" text="Banco de Midias" textFill="#f2f2f2">
                <font>

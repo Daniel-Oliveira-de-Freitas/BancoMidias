@@ -19,8 +19,8 @@
             </ImageView>
             <Button layoutX="219.0" layoutY="231.0" mnemonicParsing="false" onAction="#acaobotaoeditar" prefHeight="43.0" prefWidth="102.0" text="Editar" />
             <Button layoutX="370.0" layoutY="231.0" mnemonicParsing="false" onAction="#acaobotaopesquisa" prefHeight="43.0" prefWidth="102.0" text="Pesquisar" />
-            <Button layoutX="511.0" layoutY="231.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="102.0" text="Exibir" />
-            <Button layoutX="660.0" layoutY="231.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="102.0" text="Excluir" />
+            <Button layoutX="511.0" layoutY="231.0" mnemonicParsing="false" onAction="#acaobotaoexibir" prefHeight="43.0" prefWidth="102.0" text="Exibir" />
+            <Button layoutX="660.0" layoutY="231.0" mnemonicParsing="false" onAction="#acaobotaoexcluir" prefHeight="43.0" prefWidth="102.0" text="Excluir" />
             <Button layoutX="52.0" layoutY="231.0" mnemonicParsing="false" onAction="#acaobotaocadastro" prefHeight="43.0" prefWidth="102.0" text="Cadastrar" />
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="95.0" layoutY="32.0" prefHeight="115.0" prefWidth="586.0" text="Banco de Midias" textFill="#f2f2f2">
                <font>

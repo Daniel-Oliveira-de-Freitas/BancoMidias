@@ -12,4 +12,11 @@ public class MainController {
 	public void acaobotaopesquisa(){
 		Main.changeScene("pesquisar");
 }
+	public void acaobotaoexibir() {
+		Main.changeScene("exibir");
+	}
+	
+	public void acaobotaoexcluir() {
+		Main.changeScene("excluir");
+	}
 }

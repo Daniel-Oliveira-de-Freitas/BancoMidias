@@ -15,6 +15,8 @@ public class Main extends Application {
 	private static Scene cadastroScene;
 	private static Scene editaScene;
 	private static Scene pesquisaScene;
+	private static Scene exibirScene;
+	private static Scene excluirScene;
 
 //	@SuppressWarnings("unused")
 	@Override
@@ -33,6 +35,12 @@ public class Main extends Application {
 		   
 	    Pane fxmlpesquisa = FXMLLoader.load(getClass().getResource("pesquisarTela.fxml"));
 		   pesquisaScene = new Scene(fxmlpesquisa);   
+	
+		 Pane fxmlexibir = FXMLLoader.load(getClass().getResource("ExibirTela.fxml"));
+			   exibirScene = new Scene(fxmlexibir);   
+
+		 Pane fxmlexcluir = FXMLLoader.load(getClass().getResource("ExcluirTela.fxml"));
+			  excluirScene = new Scene(fxmlexcluir); 
 		
 			primaryStage.setScene(mainScene);
 			primaryStage.show();
@@ -54,7 +62,14 @@ public class Main extends Application {
 		case"pesquisar":
 			stage.setScene(pesquisaScene);
 			break;
-		}
+		
+	case"exibir":
+			stage.setScene(exibirScene);
+		break;
+	case"excluir":
+		stage.setScene(excluirScene);
+	break;
+	}
 	}
 	
 	public static void main(String[] args) {
