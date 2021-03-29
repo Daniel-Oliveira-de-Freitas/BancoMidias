@@ -15,7 +15,7 @@
    <children>
       <Pane prefHeight="386.0" prefWidth="639.0" style="-fx-background-color: #25294B;">
          <children>
-            <ImageView fitHeight="723.0" fitWidth="626.0" layoutX="119.0" layoutY="-107.0">
+            <ImageView fitHeight="402.0" fitWidth="656.0" layoutX="-8.0" layoutY="-8.0">
                <image>
                   <Image url="@../../../../../Creative%20Cloud%20Files/Retângulo%2038.png" />
                </image>
@@ -25,12 +25,12 @@
                   <Font name="Modern No. 20" size="64.0" />
                </font>
             </Label>
-            <Label layoutX="15.0" layoutY="99.0" text="Escolha seu tipo de midia:" textFill="#f5f5f5">
+            <Label layoutX="27.0" layoutY="111.0" text="Escolha seu tipo de mídia:" textFill="#f5f5f5">
                <font>
-                  <Font name="Segoe UI" size="18.0" />
+                  <Font name="Segoe UI" size="14.0" />
                </font>
             </Label>
-            <Button layoutX="558.0" layoutY="349.0" mnemonicParsing="false" onAction="#acaobotaovoltar" prefHeight="25.0" prefWidth="69.0" text="Voltar" />
+            <Button layoutX="528.0" layoutY="342.0" mnemonicParsing="false" onAction="#acaobotaovoltar" prefHeight="25.0" prefWidth="69.0" text="Voltar" />
             <RadioButton layoutX="27.0" layoutY="143.0" mnemonicParsing="false" text="Foto" textFill="#f5f5f5">
                <toggleGroup>
                   <ToggleGroup fx:id="TipoMidia" />
@@ -50,14 +50,14 @@
             <Label layoutX="443.0" layoutY="99.0" text="Autores" textFill="WHITE" />
             <TextField layoutX="448.0" layoutY="173.0" />
             <Label layoutX="444.0" layoutY="152.0" text="Interpetres" textFill="WHITE" />
-            <Label layoutX="240.0" layoutY="321.0" text="Idioma" textFill="WHITE" />
+            <Label layoutX="261.0" layoutY="325.0" text="Idioma" textFill="WHITE" />
             <TextField layoutX="447.0" layoutY="229.0" />
             <Label layoutX="443.0" layoutY="208.0" text="Duração" textFill="WHITE" />
             <TextField layoutX="448.0" layoutY="287.0" />
             <Label layoutX="444.0" layoutY="266.0" text="Ano" textFill="WHITE" />
             <Button layoutX="24.0" layoutY="283.0" mnemonicParsing="false" onAction="#acaobotaosalvar" prefHeight="50.0" prefWidth="176.0" style="-fx-background-color: #4B83F2; -fx-background-radius: 15;" text="Salvar Mídia" textFill="WHITE" />
-            <TextField layoutX="9.0" layoutY="216.0" prefHeight="25.0" prefWidth="181.0" />
-            <Label layoutX="42.0" layoutY="190.0" prefHeight="17.0" prefWidth="170.0" text="Digite o nome ou código" textFill="#f8f5f5">
+            <TextField layoutX="22.0" layoutY="216.0" prefHeight="25.0" prefWidth="181.0" />
+            <Label layoutX="22.0" layoutY="190.0" prefHeight="17.0" prefWidth="170.0" text="Digite o nome ou código:" textFill="#f8f5f5">
                <font>
                   <Font size="13.0" />
                </font>

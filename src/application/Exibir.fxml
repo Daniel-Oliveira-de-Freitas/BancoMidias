@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="402.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="402.0" prefWidth="656.0" style="-fx-background-color: #87CEFA;">
+         <children>
+            <Label layoutX="245.0" prefHeight="93.0" prefWidth="191.0" text="Exibir" textFill="WHITE">
+               <font>
+                  <Font name="Modern No. 20" size="64.0" />
+               </font>
+            </Label>
+            <TextField layoutX="187.0" layoutY="95.0" prefHeight="25.0" prefWidth="283.0" />
+            <RadioButton layoutX="197.0" layoutY="128.0" mnemonicParsing="false" text="Foto">
+               <toggleGroup>
+                  <ToggleGroup fx:id="TipoMidia" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="261.0" layoutY="128.0" mnemonicParsing="false" text="Música">
+               <toggleGroup>
+                  <ToggleGroup fx:id="TipoMidia1" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="340.0" layoutY="128.0" mnemonicParsing="false" text="Filme">
+               <toggleGroup>
+                  <ToggleGroup fx:id="TipoMidia2" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="406.0" layoutY="128.0" mnemonicParsing="false" text="Todos">
+               <toggleGroup>
+                  <ToggleGroup fx:id="TipoMidia11" />
+               </toggleGroup>
+            </RadioButton>
+            <ListView fx:id="exibeMidias" layoutX="12.0" layoutY="161.0" prefHeight="199.0" prefWidth="632.0" />
+            <Button layoutX="575.0" layoutY="363.0" mnemonicParsing="false" onAction="#acaobotaovoltar" prefHeight="25.0" prefWidth="69.0" text="Voltar" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

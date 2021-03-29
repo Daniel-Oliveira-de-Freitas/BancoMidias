@@ -3,7 +3,6 @@ package application;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.fxml.FXMLLoader;
 
@@ -17,7 +16,7 @@ public class Main extends Application {
 	private static Scene editaScene;
 	private static Scene pesquisaScene;
 
-	@SuppressWarnings("unused")
+//	@SuppressWarnings("unused")
 	@Override
 	public void start(Stage primaryStage) throws Exception{
 		stage = primaryStage;
