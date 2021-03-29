@@ -9,7 +9,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
-import application.CadastroController;
+import application.Midia;
 
 public class ExibirController<Midia>{
 	
