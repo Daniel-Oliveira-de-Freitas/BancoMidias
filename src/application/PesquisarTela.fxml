@@ -18,7 +18,7 @@
          <children>
             <Button fx:id="botaPesquisa" layoutX="581.0" layoutY="251.0" mnemonicParsing="false" onAction="#acaobotaopesquisar" prefHeight="25.0" prefWidth="26.0" text="P" />
             <Button layoutX="728.0" layoutY="359.0" mnemonicParsing="false" onAction="#acaobotaovoltar" prefHeight="25.0" prefWidth="55.0" text="voltar" />
-            <TextField layoutX="228.0" layoutY="252.0" prefHeight="25.0" prefWidth="354.0" />
+            <TextField fx:id="barradepesquisa" layoutX="228.0" layoutY="252.0" prefHeight="25.0" prefWidth="354.0" />
             <Label layoutX="351.0" layoutY="292.0" prefHeight="17.0" prefWidth="170.0" text="Digite o nome ou código" textFill="#f8f5f5">
                <font>
                   <Font size="13.0" />

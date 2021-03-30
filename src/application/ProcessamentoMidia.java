@@ -17,4 +17,14 @@ public class ProcessamentoMidia {
 	public void AdicionarFoto(Foto foto) {
 		fotos.add(foto);
 	}
+	
+	public Foto procuraFoto(String t) {
+		for(Foto fotosb: fotos ) {
+		   if(t.equals(fotosb.getTitulo())) {
+			   return fotosb;
+		   }
+			
+		}
+		return null;
+	}
 }
