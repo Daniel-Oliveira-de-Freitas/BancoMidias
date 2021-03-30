@@ -95,8 +95,7 @@ public class CadastroController {
 				duracaoa = duracao.getText();
 				anoa = ano.getText();
 				ProcessamentoMidia pm = new ProcessamentoMidia();
-				Musica musica = new Musica(caminho, tituloa, descricaoa, generoa, idiomaa, autoresa, interpretesa,
-						duracaoa, anoa);
+				Musica musica = new Musica(caminho, tituloa, descricaoa, generoa, idiomaa, autoresa, interpretesa, duracaoa, anoa);
 				pm.AdicionarMusica(musica);
 				System.out.println(musica);
 				avisoSucesso();

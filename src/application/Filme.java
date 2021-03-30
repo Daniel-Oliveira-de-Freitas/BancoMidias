@@ -1,9 +1,8 @@
 package application;
 
-    class Filme extends Midia {
+    class Filme extends AudioVisual {
 	
-	private String genero;
-	private String idioma;
+	
 	private String diretor;
 	private String atoresPrincipais;
 	private String duracao;
@@ -11,30 +10,13 @@ package application;
 
 	
 	    public Filme( String caminhoArquivo,String titulo,String descricao, String genero, String idioma, String diretor, String atoresPrincipais, String duracao, String ano) {
-		super(caminhoArquivo, titulo, descricao);
-		this.genero = genero;
-		this.idioma = idioma;
+		super(caminhoArquivo, titulo, descricao, genero, duracao, idioma, ano);
+		
 		this.diretor = diretor;
 		this.atoresPrincipais = atoresPrincipais;
-		this.duracao = duracao;
-		this.ano = ano;
+		
 	}
 	
-	public String getGenero() {
-		return genero;
-	}
-	
-	public void setGenero(String genero) {
-		this.genero = genero;
-	}
-	
-	public String getIdioma() {
-		return idioma;
-	}
-	
-	public void setIdioma(String idioma) {
-		this.idioma = idioma;
-	}
 	
 	public String getDiretor() {
 		return diretor;
@@ -52,27 +34,10 @@ package application;
 		this.atoresPrincipais = atoreresPrincipais;
 	}
 
-	public String getDuracao() {
-		return duracao;
-	}
 	
-	public void setDuracao(String duracao) {
-		this.duracao = duracao;
-	}
-	
-	public String getAno() {
-		return ano;
-	}
-	
-	public void setAno(String ano) {
-		this.ano = ano;
-	}
 	
 	public String toString() {
-		return (super.toString() +"\n"+
-				"Genero: " + genero + "Idioma: "+ idioma +"\n"+
-				"Diretor: "+ diretor+ "Atores Principais " + atoresPrincipais+ "\n"+
-				"Duração: "+ duracao+ "Ano: " + ano);
+		return (super.toString() +"\n"+ "Diretor: "+ diretor+ "Atores Principais " + atoresPrincipais);
 	}
 
 }

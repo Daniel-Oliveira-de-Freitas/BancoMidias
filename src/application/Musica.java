@@ -1,13 +1,14 @@
 package application;
 
-public class Musica extends Filme {
+public class Musica extends AudioVisual {
 	
 	private String autores;
 	private String interpretes;
 	
+	
 		
-	public Musica(String caminhoArquivo,String titulo,String descricao,String genero, String idioma, String autores, String interpretes, String duracao, String ano, String diretor, String atoresPrincipais) {
-		super(caminhoArquivo, titulo, descricao, genero, idioma, diretor, atoresPrincipais, duracao, ano);
+	public Musica(String caminhoArquivo,String titulo,String descricao,String genero, String idioma, String autores, String interpretes, String duracao, String ano) {
+		super(caminhoArquivo, titulo, descricao, genero, idioma, duracao, ano);
 		this.autores = autores;
 		this.interpretes = interpretes;
 	}
