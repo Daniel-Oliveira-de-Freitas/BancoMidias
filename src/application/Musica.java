@@ -5,12 +5,7 @@ public class Musica extends Filme {
 	private String autores;
 	private String interpretes;
 	
-	public Musica(String t, String diretor, String atoresPrincipais, String genero, String caminhoArquivo, String titulo, String descricao, String duracao, String ano) {
-	    super(t, caminhoArquivo, titulo, descricao, genero, duracao, ano);
 		
-		this.autores = diretor;
-		this.interpretes = atoresPrincipais;
-	}	
 	public Musica(String caminhoArquivo,String titulo,String descricao,String genero, String idioma, String autores, String interpretes, String duracao, String ano, String diretor, String atoresPrincipais) {
 		super(caminhoArquivo, titulo, descricao, genero, idioma, diretor, atoresPrincipais, duracao, ano);
 		this.autores = autores;

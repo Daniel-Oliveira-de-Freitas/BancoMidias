@@ -9,9 +9,7 @@ package application;
 	private String duracao;
 	private String ano;
 
-	public Filme(String t, String genero, String idioma, String diretor, String atoresPrincipais, String duracao, String ano) {
-	    super(t);
-	}
+	
 	    public Filme( String caminhoArquivo,String titulo,String descricao, String genero, String idioma, String diretor, String atoresPrincipais, String duracao, String ano) {
 		super(caminhoArquivo, titulo, descricao);
 		this.genero = genero;

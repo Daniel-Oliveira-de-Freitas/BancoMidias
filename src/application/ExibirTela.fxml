@@ -13,7 +13,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ExibirController">
    <children>
-      <Pane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #87CEFA;">
+      <Pane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color:#87CEFA; ">
          <children>
             <Label layoutX="331.0" prefHeight="93.0" prefWidth="191.0" text="Exibir" textFill="WHITE">
                <font>

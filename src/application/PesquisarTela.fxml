@@ -16,12 +16,7 @@
    <children>
       <Pane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #25294B;">
          <children>
-            <ImageView fitHeight="816.0" fitWidth="728.0" layoutX="205.0" layoutY="-168.0">
-               <image>
-                  <Image url="@../../../../../Creative%20Cloud%20Files/Retângulo%2038.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="581.0" layoutY="251.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" text="Button" />
+            <Button fx:id="botaPesquisa" layoutX="581.0" layoutY="251.0" mnemonicParsing="false" onAction="#acaobotaopesquisar" prefHeight="25.0" prefWidth="26.0" text="P" />
             <Button layoutX="728.0" layoutY="359.0" mnemonicParsing="false" onAction="#acaobotaovoltar" prefHeight="25.0" prefWidth="55.0" text="voltar" />
             <TextField layoutX="228.0" layoutY="252.0" prefHeight="25.0" prefWidth="354.0" />
             <Label layoutX="351.0" layoutY="292.0" prefHeight="17.0" prefWidth="170.0" text="Digite o nome ou código" textFill="#f8f5f5">
@@ -30,24 +25,19 @@
                </font>
             </Label>
             <ButtonBar layoutX="579.0" layoutY="353.0" />
-            <Label layoutX="288.0" layoutY="16.0" prefHeight="91.0" prefWidth="295.0" text="Pesquisar" textFill="WHITE">
+            <Label layoutX="297.0" layoutY="16.0" prefHeight="91.0" prefWidth="295.0" text="Pesquisar" textFill="WHITE">
                <font>
                   <Font name="Modern No. 20" size="64.0" />
                </font>
             </Label>
-            <ImageView fitHeight="100.0" fitWidth="274.0" layoutX="280.0" layoutY="124.0">
+            <ImageView fitHeight="100.0" fitWidth="274.0" layoutX="274.0" layoutY="124.0">
                <image>
                   <Image url="@../../../../../Creative%20Cloud%20Files/filmes.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="116.0" fitWidth="175.0" layoutX="38.0" layoutY="118.0">
+            <ImageView fitHeight="116.0" fitWidth="175.0" layoutX="60.0" layoutY="118.0">
                <image>
                   <Image url="@../../../../../Creative%20Cloud%20Files/NoPath.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="116.0" fitWidth="175.0" layoutX="608.0" layoutY="113.0">
-               <image>
-                  <Image url="@../../../../../Creative%20Cloud%20Files/livros.png" />
                </image>
             </ImageView>
             <Label layoutX="324.0" layoutY="319.0" text="Escolha seu tipo de midia:" textFill="#f6f5f8">
@@ -61,6 +51,11 @@
                </toggleGroup></RadioButton>
             <RadioButton layoutX="394.0" layoutY="363.0" mnemonicParsing="false" text="Música" textFill="#f5f5f5" toggleGroup="$TipoMidia" />
             <RadioButton layoutX="467.0" layoutY="363.0" mnemonicParsing="false" text="Filme" textFill="#f5f5f5" toggleGroup="$TipoMidia" />
+            <ImageView fitHeight="116.0" fitWidth="175.0" layoutX="585.0" layoutY="122.0">
+               <image>
+                  <Image url="@../../imagens/Imagem%201.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </children>
