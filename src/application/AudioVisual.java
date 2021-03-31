@@ -1,18 +1,14 @@
 package application;
 
-public abstract class AudioVisual {
-	private String caminhoArquivo;
-	private String titulo;
-	private String descricao;
+public abstract class AudioVisual extends Midia{
+
 	private String genero;
 	private String idioma;
 	private String duracao;
 	private String ano;
 
 	public AudioVisual(String caminhoArquivo, String titulo, String descricao,String genero, String idioma, String duracao, String ano) {
-		this.caminhoArquivo = caminhoArquivo;
-		this.titulo = titulo;
-		this.descricao = descricao;
+		super(caminhoArquivo,titulo,descricao);
 		this.genero = genero;
 		this.idioma = idioma;
 		this.duracao = duracao;
@@ -51,36 +47,10 @@ public abstract class AudioVisual {
 		this.ano = ano;
 	}
 	
-	public String getCaminhoArquivo() {
-		return caminhoArquivo;
-	}
-
-	public void setCaminhoArquivo(String caminhoArquivo) {
-		this.caminhoArquivo = caminhoArquivo;
-	}
-
-	public String getTitulo() {
-		return titulo;
-	}
-
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
-
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-	
 	public String toString() {
-		return  "Caminho do Arquivo: "+ caminhoArquivo +"\n"+
-				"Titulo: " + titulo+"\n"+
-				"Descrição: "+descricao + "\n" +
-				"Genero: " + genero + "Idioma: "+ idioma +"\n"+
-				"Duração: "+ duracao+ "Ano: " + ano;
+		return  super.toString() +
+				" Genero: " + genero + " Idioma: "+ idioma +"\n"+
+				" Duração: "+ duracao+ " Ano: " + ano;
 	}
 
 }

@@ -1,6 +1,6 @@
 package application;
 
- public abstract class Midia {
+ public abstract class Midia{
 	private String caminhoArquivo;
 	private String titulo;
 	private String descricao;

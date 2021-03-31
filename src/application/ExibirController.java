@@ -43,18 +43,16 @@ public class ExibirController implements Initializable{
 	private TableColumn<String,Foto> local;
 	@FXML
 	private TableColumn<String,Foto> data;
-	
+	 File arquivo = new File("/tmp/Foto.txt");
+	ProcessamentoMidia pm = new ProcessamentoMidia();
 	public void acaobotaovoltar(){
 		Main.changeScene("main");
 	}
-
-	
 	public void refresh() {
 
 	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		 File arquivo = new File("/tmp/Foto.txt");
 		 String caminholocal = null, tituloa = null, desca = null,fotografoa = null,pessoasa = null,locala = null,dataa = null,linha;
 	      try {
 	          if (!arquivo.exists()) {
@@ -74,7 +72,6 @@ public class ExibirController implements Initializable{
 	              pessoasa = dados[4];
 	              locala = dados[5];
 	              dataa= dados[6];
-	          	ProcessamentoMidia pm = new ProcessamentoMidia();
 	              Foto foto = new Foto(caminholocal, tituloa, desca, fotografoa, pessoasa,locala,dataa);
 	              System.out.println(foto);
 	              pm.AdicionarFoto(foto);

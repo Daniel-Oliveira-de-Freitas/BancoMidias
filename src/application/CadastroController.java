@@ -58,7 +58,7 @@ public class CadastroController {
 	private RadioButton musica;
 	@FXML 
 	private RadioButton filme;
-
+	ProcessamentoMidia pm = new ProcessamentoMidia();
 	public void acaobotaosalvar() {
 		Alert alert = new Alert(Alert.AlertType.WARNING);
 		if (!titulo.getText().isEmpty()) {
@@ -73,14 +73,12 @@ public class CadastroController {
 				atoresa = interpretes.getText();
 				duracaoa = duracao.getText();
 				anoa = ano.getText();
-				ProcessamentoMidia pm = new ProcessamentoMidia();
-
 				Filme filme = new Filme(caminho, tituloa, descricaoa, generoa, idiomaa, diretora, atoresa, duracaoa,
 						anoa);
 				pm.AdicionarFilme(filme);
 				System.out.println(filme);
 				avisoSucesso();
-				salvarFilme();
+				pm.salvarFilme();
 				acaobotaovoltar();
 
 			} else if (musica.isSelected()) {
@@ -94,12 +92,11 @@ public class CadastroController {
 				interpretesa = interpretes.getText();
 				duracaoa = duracao.getText();
 				anoa = ano.getText();
-				ProcessamentoMidia pm = new ProcessamentoMidia();
 				Musica musica = new Musica(caminho, tituloa, descricaoa, generoa, idiomaa, autoresa, interpretesa, duracaoa, anoa);
 				pm.AdicionarMusica(musica);
 				System.out.println(musica);
 				avisoSucesso();
-				salvarMusica();
+				pm.salvarMusica();
 				acaobotaovoltar();
 
 			} else if (foto.isSelected()) {
@@ -111,12 +108,11 @@ public class CadastroController {
 				pessoasa = idioma.getText();
 				locala = autores.getText();
 				dataa = interpretes.getText();
-				ProcessamentoMidia pm = new ProcessamentoMidia();
 				Foto foto = new Foto(caminho, tituloa, descricaoa, fotografoa, pessoasa, locala, dataa);
 				pm.AdicionarFoto(foto);
 				System.out.println(foto);
 				avisoSucesso();
-				salvarFoto();
+				pm.salvarFoto();
 				acaobotaovoltar();
 
 			} else if (!filme.isSelected()) {
@@ -182,66 +178,6 @@ public class CadastroController {
 		filme.setSelected(false);
 		musica.setSelected(false);
 		foto.setSelected(false);
-	}
-
-	// função que envolve criar um arquivo de texto para musica pegando as
-	// informações do campos de texto
-	public void salvarMusica() {
-		try {
-			File arquivo = new File("/tmp/Musica.txt");
-			FileWriter fc = new FileWriter(arquivo);
-			BufferedWriter bc = new BufferedWriter(fc);
-			String linha = caminhoarquivo.getText() + ";" + titulo.getText() + ";" + descricao.getText() + ";"
-					+ genero.getText() + ";" + idioma.getText() + ";" + autores.getText() + ";" + interpretes.getText()
-					+ ";" + duracao.getText() + ";" + ano.getText() + ";";
-			bc.write(linha);
-			bc.newLine();
-			bc.close();
-			fc.close();
-		} catch (Exception m) {
-			System.out.println(m);
-			System.out.println("Deu erro");
-		}
-	}
-
-	// função que envolve criar um arquivo de texto para filme pegando as
-	// informações do campos de texto
-	public void salvarFilme() {
-		try {
-			File arquivo = new File("/tmp/Filme.txt");
-			FileWriter fc = new FileWriter(arquivo);
-			BufferedWriter bc = new BufferedWriter(fc);
-			String linha = caminhoarquivo.getText() + ";" + titulo.getText() + ";" + descricao.getText() + ";"
-					+ genero.getText() + ";" + idioma.getText() + ";" + autores.getText() + ";" + interpretes.getText()
-					+ ";" + duracao.getText() + ";" + ano.getText() + ";";
-			bc.write(linha);
-			bc.newLine();
-			bc.close();
-			fc.close();
-		} catch (Exception m) {
-			System.out.println(m);
-			System.out.println("Deu erro");
-		}
-	}
-
-	// função que envolve criar um arquivo de texto para foto pegando as informações
-	// do campos de texto
-	public void salvarFoto() {
-		try {
-			File arquivo = new File("/tmp/Foto.txt");
-			FileWriter fc = new FileWriter(arquivo);
-			BufferedWriter bc = new BufferedWriter(fc);
-			String linha = caminhoarquivo.getText() + ";" + titulo.getText() + ";" + descricao.getText() + ";"
-					+ genero.getText() + ";" + idioma.getText() + ";" + autores.getText() + ";" + interpretes.getText()
-					+ ";";
-			bc.write(linha);
-			bc.newLine();
-			bc.close();
-			fc.close();
-		} catch (Exception m) {
-			System.out.println(m);
-			System.out.println("Deu erro");
-		}
 	}
 
 	// avisa para ser escolhido um tipo de midia
