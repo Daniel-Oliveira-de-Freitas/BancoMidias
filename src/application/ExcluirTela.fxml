@@ -14,7 +14,7 @@
    <children>
       <Pane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #25294B;">
          <children>
-            <TextField layoutX="274.0" layoutY="95.0" prefHeight="25.0" prefWidth="283.0" />
+            <TextField fx:id="barradepesquisa" layoutX="274.0" layoutY="95.0" prefHeight="25.0" prefWidth="283.0" />
             <Label layoutX="336.0" layoutY="-4.0" prefHeight="93.0" prefWidth="244.0" text="Excluir" textFill="WHITE">
                <font>
                   <Font name="Modern No. 20" size="64.0" />
@@ -42,6 +42,7 @@
             </RadioButton>
             <ListView fx:id="exibeMidias" layoutX="98.0" layoutY="156.0" prefHeight="195.0" prefWidth="632.0" />
             <Button layoutX="719.0" layoutY="365.0" mnemonicParsing="false" onAction="#acaobotaovoltar" prefHeight="25.0" prefWidth="69.0" text="Voltar" />
+            <Button layoutX="568.0" layoutY="95.0" mnemonicParsing="false" onAction="#botaoPesquisa" text="P" />
          </children></Pane>
    </children>
 </AnchorPane>

@@ -50,6 +50,20 @@ public class ProcessamentoMidia {
 		}
 		return "Não há midia desse tipo cadastrada";
 	}
+	public boolean excluifoto(String t) {
+		Foto foto = null;
+		for (Foto fotosb : fotos) {
+			if (t.equals(fotosb.getTitulo())) {
+				foto = fotosb; // recebe o codigo do produto
+			}
+		}
+
+		if (foto != null) { // verfica se é diferente de null se for irá remover o produto
+			fotos.remove(foto);
+			return true;
+		}
+		return false;
+	}
 	
 	// função que envolve salvar as informações da foto em um arquivo de texto
 	public void salvarFoto() {
