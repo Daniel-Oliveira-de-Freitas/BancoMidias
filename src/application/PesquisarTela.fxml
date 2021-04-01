@@ -45,12 +45,12 @@
                   <Font name="Segoe UI" size="18.0" />
                </font>
             </Label>
-            <RadioButton layoutX="336.0" layoutY="363.0" mnemonicParsing="false" text="Foto" textFill="#f5f5f5">
+            <RadioButton fx:id="fotoid" layoutX="336.0" layoutY="363.0" mnemonicParsing="false" text="Foto" textFill="#f5f5f5">
                <toggleGroup>
                   <ToggleGroup fx:id="TipoMidia" />
                </toggleGroup></RadioButton>
-            <RadioButton layoutX="394.0" layoutY="363.0" mnemonicParsing="false" text="Música" textFill="#f5f5f5" toggleGroup="$TipoMidia" />
-            <RadioButton layoutX="467.0" layoutY="363.0" mnemonicParsing="false" text="Filme" textFill="#f5f5f5" toggleGroup="$TipoMidia" />
+            <RadioButton fx:id="musicaid" layoutX="394.0" layoutY="363.0" mnemonicParsing="false" text="Música" textFill="#f5f5f5" toggleGroup="$TipoMidia" />
+            <RadioButton fx:id="filmeid" layoutX="467.0" layoutY="363.0" mnemonicParsing="false" text="Filme" textFill="#f5f5f5" toggleGroup="$TipoMidia" />
             <ImageView fitHeight="116.0" fitWidth="175.0" layoutX="585.0" layoutY="122.0">
                <image>
                   <Image url="@../../imagens/Imagem%201.png" />

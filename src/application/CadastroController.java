@@ -58,7 +58,7 @@ public class CadastroController {
 	private RadioButton musica;
 	@FXML 
 	private RadioButton filme;
-	ProcessamentoMidia pm = new ProcessamentoMidia();
+
 	public void acaobotaosalvar() {
 		Alert alert = new Alert(Alert.AlertType.WARNING);
 		if (!titulo.getText().isEmpty()) {
@@ -75,10 +75,10 @@ public class CadastroController {
 				anoa = ano.getText();
 				Filme filme = new Filme(caminho, tituloa, descricaoa, generoa, idiomaa, diretora, atoresa, duracaoa,
 						anoa);
-				pm.AdicionarFilme(filme);
+				Main.instancia().AdicionarFilme(filme);
 				System.out.println(filme);
 				avisoSucesso();
-				pm.salvarFilme();
+				Main.instancia().salvarFilme();
 				acaobotaovoltar();
 
 			} else if (musica.isSelected()) {
@@ -93,10 +93,10 @@ public class CadastroController {
 				duracaoa = duracao.getText();
 				anoa = ano.getText();
 				Musica musica = new Musica(caminho, tituloa, descricaoa, generoa, idiomaa, autoresa, interpretesa, duracaoa, anoa);
-				pm.AdicionarMusica(musica);
+				Main.instancia().AdicionarMusica(musica);
 				System.out.println(musica);
 				avisoSucesso();
-				pm.salvarMusica();
+				Main.instancia().salvarMusica();
 				acaobotaovoltar();
 
 			} else if (foto.isSelected()) {
@@ -109,10 +109,10 @@ public class CadastroController {
 				locala = autores.getText();
 				dataa = interpretes.getText();
 				Foto foto = new Foto(caminho, tituloa, descricaoa, fotografoa, pessoasa, locala, dataa);
-				pm.AdicionarFoto(foto);
+				Main.instancia().AdicionarFoto(foto);
 				System.out.println(foto);
 				avisoSucesso();
-				pm.salvarFoto();
+				Main.instancia().salvarFoto();
 				acaobotaovoltar();
 
 			} else if (!filme.isSelected()) {

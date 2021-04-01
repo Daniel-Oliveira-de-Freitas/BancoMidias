@@ -1,5 +1,7 @@
 package application;
 	
+import java.io.File;
+
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -17,8 +19,11 @@ public class Main extends Application {
 	private static Scene pesquisaScene;
 	private static Scene exibirScene;
 	private static Scene excluirScene;
-
-//	@SuppressWarnings("unused")
+	private static ProcessamentoMidia instancia;
+	private static File fotofile;
+	private static File filmefile;
+	private static File musicafile;
+	//	@SuppressWarnings("unused")
 	@Override
 	public void start(Stage primaryStage) throws Exception{
 		stage = primaryStage;
@@ -71,7 +76,35 @@ public class Main extends Application {
 	break;
 	}
 	}
+	public static ProcessamentoMidia instancia() {
+		if (instancia == null) {
+		instancia = new ProcessamentoMidia();
+		}
+		return instancia;
+		
+	}
 	
+	public static File fotofile() {
+		if (fotofile == null) {
+		fotofile = new File("C:\\tmp\\Foto.txt");
+		}
+		return fotofile;
+		
+	}
+	public static File filmefile() {
+		if (filmefile == null) {
+			filmefile = new File("C:\\tmp\\Filme.txt");
+		}
+		return filmefile;
+		
+	}
+	public static File musicafile() {
+		if (musicafile == null) {
+			musicafile = new File("C:\\tmp\\Musica.txt");
+		}
+		return musicafile;
+		
+	}
 	public static void main(String[] args) {
 		launch(args);
 		

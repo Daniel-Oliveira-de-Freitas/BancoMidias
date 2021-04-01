@@ -42,7 +42,7 @@ package application;
 	}
 	
 	public String toString() {
-		return "Destino: " + caminhoArquivo + "Titulo: " + titulo + "Descricao: "+ descricao;
+		return " Destino: " + caminhoArquivo +'\n'+ " Titulo: " + titulo +'\n'+ " Descricao: "+ descricao;
 	}
 
 }

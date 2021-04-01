@@ -49,8 +49,8 @@ public class Foto extends Midia {
 	}
 	
 	public String toString() {
-		return (super.toString()+ "Fotografo: "+ fotografo + "Pessoas:"+ pessoas+"\n"+
-								  "Local: " + local + "Data: " +data);
+		return (super.toString()+'\n'+ " Fotografo: "+ fotografo +'\n'+ " Pessoas:"+ pessoas+'\n'+
+								  " Local: " + local +'\n'+ " Data: " +data);
 	}
 	
 	

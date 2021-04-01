@@ -10,9 +10,6 @@ public class ProcessamentoMidia {
 	ArrayList<Musica>musicas= new ArrayList<Musica>();
 	ArrayList<Foto>fotos= new ArrayList<Foto>();
 	
-	File fotofile = new File("C:\\tmp\\Foto.txt");
-	File filmefile = new File("C:\\tmp\\Filme.txt");
-	File musicafile = new File("C:\\tmp\\Musica.txt");
 	
 	public void AdicionarFilme(Filme filme) {
 		filmes.add(filme);
@@ -25,22 +22,40 @@ public class ProcessamentoMidia {
 		fotos.add(foto);
 	}
 	
-	public Foto procuraFoto(String t) {
+	public String procuraFoto(String t) {
 		for(Foto fotosb: fotos ) {
 		   if(t.equals(fotosb.getTitulo())) {
-			   return fotosb;
+			   return fotosb.toString();
 		   }
 			
 		}
-		return null;
+		return "Não há midia desse tipo cadastrada";
 	}
 	
-	// função que envolve criar um arquivo de texto para foto pegando as informações
+	public String procuraMusica(String t) {
+		for(Musica musicasb: musicas) {
+		   if(t.equals(musicasb.getTitulo())) {
+			   return musicasb.toString();
+		   }
+			
+		}
+		return "Não há midia desse tipo cadastrada";
+	}
+	public String procuraFilme(String t) {
+		for(Filme filmesb: filmes) {
+		   if(t.equals(filmesb.getTitulo())) {
+			   return filmesb.toString();
+		   }
+			
+		}
+		return "Não há midia desse tipo cadastrada";
+	}
+	
+	// função que envolve salvar as informações da foto em um arquivo de texto
 	public void salvarFoto() {
-		String linha, caminhoarquivo = null, titulo = null, descricao = null, fotografo = null, pessoas = null,
-				local = null, data = null;
+		String linha;
 		try {
-			FileWriter fc = new FileWriter(fotofile);
+			FileWriter fc = new FileWriter(Main.fotofile());
 			BufferedWriter bc = new BufferedWriter(fc);
 			for(Foto foto : fotos) {
 			linha = foto.getCaminhoArquivo() + ";" + foto.getTitulo() + ";" + foto.getDescricao() + ";" + foto.getFotografo() + ";" + foto.getPessoas() + ";" + foto.getLocal() + ";"
@@ -56,11 +71,11 @@ public class ProcessamentoMidia {
 		}
 	}
 
-	// função que envolve criar um arquivo de texto para musica pegando as
+	// função que envolve salvar as informações da musica em um arquivo de texto
 	public void salvarMusica() {
 		String linha;
 		try {
-			FileWriter fc = new FileWriter(musicafile);
+			FileWriter fc = new FileWriter(Main.musicafile());
 			BufferedWriter bc = new BufferedWriter(fc);
 			for(Musica m: musicas) {
 			linha = m.getCaminhoArquivo() + ";" + m.getTitulo() + ";" + m.getDescricao() + ";" + m.getGenero() + ";" + m.getIdioma() + ";" + m.getAutores() + ";"
@@ -76,12 +91,11 @@ public class ProcessamentoMidia {
 		}
 	}
 
-	// função que envolve criar um arquivo de texto para filme pegando as
+	// função que envolve salvar as informações do filme em um arquivo de texto
 	public void salvarFilme() {
-		String linha, caminhoarquivo = null, titulo = null, descricao = null, genero = null, idioma = null,
-				diretor = null, atoresprincipais = null, duracao = null, ano = null;
+		String linha;
 		try {
-			FileWriter fc = new FileWriter(filmefile);
+			FileWriter fc = new FileWriter(Main.filmefile());
 			BufferedWriter bc = new BufferedWriter(fc);
 			for(Filme f : filmes) {
 			linha = f.getCaminhoArquivo() + ";" + f.getTitulo() + ";" + f.getDescricao() + ";" + f.getGenero() + ";" + f.getIdioma() + ";" + f.getDiretor()+ f.getAtoresPrincipais() + ";" + f.getDuracao() + ";" + f.getAno() + ";";

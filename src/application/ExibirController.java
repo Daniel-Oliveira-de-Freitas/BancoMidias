@@ -43,9 +43,7 @@ public class ExibirController implements Initializable{
 	private TableColumn<String,Foto> local;
 	@FXML
 	private TableColumn<String,Foto> data;
-	 File arquivo = new File("/tmp/Foto.txt");
-	ProcessamentoMidia pm = new ProcessamentoMidia();
-	
+
 	public void acaobotaovoltar(){
 		Main.changeScene("main");
 	}
@@ -56,12 +54,7 @@ public class ExibirController implements Initializable{
 		 String caminholocal = null, tituloa = null, desca = null,fotografoa = null,pessoasa = null,locala = null,dataa = null,linha;
 		 ObservableList<Foto> items = FXCollections.observableArrayList();
 	      try {
-	          if (!arquivo.exists()) {
-	              arquivo.createNewFile();
-	          }
-	      }catch (IOException e) {}
-	      try {
-	          FileReader fr = new FileReader(arquivo);
+	          FileReader fr = new FileReader(Main.fotofile());
 	          BufferedReader br = new BufferedReader(fr);
 	          while (br.ready()) {
 	              linha = br.readLine();  
@@ -73,26 +66,23 @@ public class ExibirController implements Initializable{
 	              pessoasa = dados[4];
 	              locala = dados[5];
 	              dataa= dados[6];
-	              Foto foto = new Foto(caminholocal, tituloa, desca, fotografoa, pessoasa,locala,dataa);
-	              System.out.println(foto);
-	              pm.AdicionarFoto(foto);
 	              items.add(new Foto(caminholocal, tituloa, desca, fotografoa, pessoasa,locala,dataa));
 	          }
 	      } catch (IOException n) {System.out.println("Oi");}
 			tabela.setItems(items);
 			localarquivo.setCellValueFactory(new PropertyValueFactory<String,Foto>("CaminhoArquivo"));
 			titulo.setCellValueFactory(new PropertyValueFactory<String,Foto>("titulo"));
+			desc.setCellValueFactory(new PropertyValueFactory<String,Foto>("descricao"));
 			fotografo.setCellValueFactory(new PropertyValueFactory<String,Foto>("pessoas"));
 			pessoas.setCellValueFactory(new PropertyValueFactory<String,Foto>("fotografo"));
 			local.setCellValueFactory(new PropertyValueFactory<String,Foto>("local"));
 			data.setCellValueFactory(new PropertyValueFactory<String,Foto>("data"));
-	}
+			tabela.refresh();	
+		}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 			Atualizar();
 			tabela.refresh();	
-		
-	
 		}
 }
 
