@@ -24,6 +24,8 @@ import application.Midia;
 
 public class ExibirController implements Initializable{
 	@FXML
+	private RadioButton musicaid;
+	@FXML
 	private RadioButton filmeid;
 	@FXML
 	private RadioButton fotoid;
@@ -43,12 +45,45 @@ public class ExibirController implements Initializable{
 	private TableColumn<String,Foto> local;
 	@FXML
 	private TableColumn<String,Foto> data;
+	
+	@FXML
+	private TableView <Musica> tabelam;
+	@FXML
+	private TableColumn<String,Musica> localarquivom;
+	@FXML
+	private TableColumn<String,Musica> titulomusic;
+	@FXML
+	private TableColumn<String,Musica> descricaomusic;
+	@FXML
+	private TableColumn<String,Musica> generomusic;
+	@FXML
+	private TableColumn<String,Musica> idiomamusic;
+	@FXML
+	private TableColumn<String,Musica> autoresmusic;
+	@FXML
+	private TableColumn<String,Musica> interpretesmusic;
+	@FXML
+	private TableColumn<String,Musica> duracaomusic;
+	@FXML
+	private TableColumn<String,Musica> anomusic;
+	
 
 	public void acaobotaovoltar(){
 		Main.changeScene("main");
 	}
 	public void Atualizar() {
+		if(fotoid.isSelected()) {
 		tabelaFoto();
+		tabelam.setVisible(false);
+		tabela.setVisible(true);
+		}else if(musicaid.isSelected()) {
+			tabelaMusica();
+			tabelam.setVisible(true);
+			tabela.setVisible(false);
+		}
+	
+		
+		
 	}
 	public void tabelaFoto() {
 		 String caminholocal = null, tituloa = null, desca = null,fotografoa = null,pessoasa = null,locala = null,dataa = null,linha;
@@ -79,10 +114,46 @@ public class ExibirController implements Initializable{
 			data.setCellValueFactory(new PropertyValueFactory<String,Foto>("data"));
 			tabela.refresh();	
 		}
+	
+	
+	public void tabelaMusica() {
+		 String caminholocalm = null, titulom = null, descricaom = null,generom = null,idiomam = null,autoresm = null,interpretesm = null,duracaom = null,anom = null,linha;
+		 ObservableList<Musica> itemsmusica = FXCollections.observableArrayList();
+	      try {
+	          FileReader fr = new FileReader(Main.musicafile());
+	          BufferedReader br = new BufferedReader(fr);
+	          while (br.ready()) {
+	              linha = br.readLine();  
+	              String dados[] = linha.split(";");
+	              caminholocalm = dados[0];
+	              titulom = dados[1];
+	              descricaom = dados[2];
+	              generom  = dados[3];
+	              idiomam = dados[4];
+	              autoresm = dados[5];
+	              interpretesm = dados[6];
+	              duracaom = dados[7];
+	              anom = dados[8];
+	              itemsmusica.add(new Musica(caminholocalm, titulom, descricaom, generom, idiomam, autoresm, interpretesm, duracaom,anom));
+	          }
+	      } catch (IOException n) {System.out.println("Oi");}
+			tabelam.setItems(itemsmusica);
+			localarquivom.setCellValueFactory(new PropertyValueFactory<String,Musica>("CaminhoArquivo"));
+			titulomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("titulo"));
+			descricaomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("descricao"));
+			generomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("genero"));
+			idiomamusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("idioma"));
+			autoresmusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("autores"));
+			interpretesmusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("interpretes"));
+			duracaomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("duracao"));
+			anomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("ano"));
+			tabelam.refresh();	
+		}
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 			Atualizar();
-			tabela.refresh();	
+			
 		}
 }
 

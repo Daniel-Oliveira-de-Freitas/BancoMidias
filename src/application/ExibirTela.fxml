@@ -26,14 +26,14 @@
                   <ToggleGroup fx:id="TipoMidiaExibir" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton layoutX="341.0" layoutY="128.0" mnemonicParsing="false" text="Música" toggleGroup="$TipoMidiaExibir" />
+            <RadioButton fx:id="musicaid" layoutX="341.0" layoutY="128.0" mnemonicParsing="false" text="Música" toggleGroup="$TipoMidiaExibir" />
             <RadioButton fx:id="filmeid" layoutX="420.0" layoutY="128.0" mnemonicParsing="false" text="Filme" toggleGroup="$TipoMidiaExibir" />
             <RadioButton layoutX="486.0" layoutY="128.0" mnemonicParsing="false" text="Todos" toggleGroup="$TipoMidiaExibir" />
             <Button layoutX="723.0" layoutY="366.0" mnemonicParsing="false" onAction="#acaobotaovoltar" prefHeight="25.0" prefWidth="69.0" text="Voltar" />
             <TableView fx:id="tabela" layoutX="101.0" layoutY="160.0" prefHeight="200.0" prefWidth="632.0">
               <columns>
-                <TableColumn fx:id="localarquivo" prefWidth="132.0000638961792" text="Caminho do arquivo" />
-                <TableColumn fx:id="titulo" prefWidth="88.79998779296875" text="Titulo" />
+                <TableColumn fx:id="localarquivo" prefWidth="120.0" text="Caminho do arquivo" />
+                <TableColumn fx:id="titulo" prefWidth="102.0" text="Titulo" />
                   <TableColumn fx:id="desc" prefWidth="91.19999694824219" text="Descrição" />
                   <TableColumn fx:id="fotografo" prefWidth="88.0" text="Fotógrafo" />
                   <TableColumn fx:id="pessoas" prefWidth="76.800048828125" text="Pessoas" />
@@ -42,6 +42,19 @@
               </columns>
             </TableView>
             <Button layoutX="8.0" layoutY="366.0" mnemonicParsing="false" onAction="#Atualizar" prefHeight="25.0" prefWidth="69.0" text="Atualizar" />
+            <TableView fx:id="tabelam" layoutX="101.0" layoutY="161.0" prefHeight="200.0" prefWidth="632.0">
+              <columns>
+                <TableColumn fx:id="localarquivom" prefWidth="75.0" text="CaminhoArquivo" />
+                <TableColumn fx:id="titulomusic" prefWidth="75.0" text="Titulo" />
+                  <TableColumn fx:id="descricaomusic" prefWidth="75.0" text="Descricao" />
+                  <TableColumn fx:id="generomusic" prefWidth="75.0" text="Genero" />
+                  <TableColumn fx:id="idiomamusic" prefWidth="75.0" text="Idioma" />
+                  <TableColumn fx:id="autoresmusic" prefWidth="75.0" text="Autores" />
+                  <TableColumn fx:id="interpretesmusic" prefWidth="75.0" text="Interpretes" />
+                  <TableColumn fx:id="duracaomusic" prefWidth="75.0" text="Duração" />
+                  <TableColumn fx:id="anomusic" prefWidth="75.0" text="Ano" />
+              </columns>
+            </TableView>
          </children>
       </Pane>
    </children>
