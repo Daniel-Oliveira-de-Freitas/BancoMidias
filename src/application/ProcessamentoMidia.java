@@ -36,7 +36,6 @@ public class ProcessamentoMidia {
 	}
 	
 	// função que envolve criar um arquivo de texto para foto pegando as informações
-	// do campos de texto
 	public void salvarFoto() {
 		String linha, caminhoarquivo = null, titulo = null, descricao = null, fotografo = null, pessoas = null,
 				local = null, data = null;
@@ -58,7 +57,6 @@ public class ProcessamentoMidia {
 	}
 
 	// função que envolve criar um arquivo de texto para musica pegando as
-	// informações do campos de texto
 	public void salvarMusica() {
 		String linha;
 		try {
@@ -79,7 +77,6 @@ public class ProcessamentoMidia {
 	}
 
 	// função que envolve criar um arquivo de texto para filme pegando as
-	// informações do campos de texto
 	public void salvarFilme() {
 		String linha, caminhoarquivo = null, titulo = null, descricao = null, genero = null, idioma = null,
 				diretor = null, atoresprincipais = null, duracao = null, ano = null;

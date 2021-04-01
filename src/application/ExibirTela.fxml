@@ -41,6 +41,7 @@
                   <TableColumn fx:id="data" prefWidth="70.4000244140625" text="Data" />
               </columns>
             </TableView>
+            <Button layoutX="8.0" layoutY="366.0" mnemonicParsing="false" onAction="#Atualizar" prefHeight="25.0" prefWidth="69.0" text="Atualizar" />
          </children>
       </Pane>
    </children>

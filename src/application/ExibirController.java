@@ -45,15 +45,16 @@ public class ExibirController implements Initializable{
 	private TableColumn<String,Foto> data;
 	 File arquivo = new File("/tmp/Foto.txt");
 	ProcessamentoMidia pm = new ProcessamentoMidia();
+	
 	public void acaobotaovoltar(){
 		Main.changeScene("main");
 	}
-	public void refresh() {
-
+	public void Atualizar() {
+		tabelaFoto();
 	}
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
+	public void tabelaFoto() {
 		 String caminholocal = null, tituloa = null, desca = null,fotografoa = null,pessoasa = null,locala = null,dataa = null,linha;
+		 ObservableList<Foto> items = FXCollections.observableArrayList();
 	      try {
 	          if (!arquivo.exists()) {
 	              arquivo.createNewFile();
@@ -75,11 +76,9 @@ public class ExibirController implements Initializable{
 	              Foto foto = new Foto(caminholocal, tituloa, desca, fotografoa, pessoasa,locala,dataa);
 	              System.out.println(foto);
 	              pm.AdicionarFoto(foto);
+	              items.add(new Foto(caminholocal, tituloa, desca, fotografoa, pessoasa,locala,dataa));
 	          }
 	      } catch (IOException n) {System.out.println("Oi");}
-	      ObservableList<Foto> items = FXCollections.observableArrayList();
-
-			items.add(new Foto(caminholocal, tituloa, desca, fotografoa, pessoasa,locala,dataa));
 			tabela.setItems(items);
 			localarquivo.setCellValueFactory(new PropertyValueFactory<String,Foto>("CaminhoArquivo"));
 			titulo.setCellValueFactory(new PropertyValueFactory<String,Foto>("titulo"));
@@ -87,7 +86,10 @@ public class ExibirController implements Initializable{
 			pessoas.setCellValueFactory(new PropertyValueFactory<String,Foto>("fotografo"));
 			local.setCellValueFactory(new PropertyValueFactory<String,Foto>("local"));
 			data.setCellValueFactory(new PropertyValueFactory<String,Foto>("data"));
-
+	}
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+			Atualizar();
 			tabela.refresh();	
 		
 	
