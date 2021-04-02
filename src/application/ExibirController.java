@@ -103,7 +103,7 @@ public class ExibirController implements Initializable{
 			tabelam.setVisible(true);
 			tabela.setVisible(false);
 			tabelaf.setVisible(false);
-		}else if(musicaid.isSelected()) {
+		}else if(filmeid.isSelected()) {
 			tabelaFilme();
 			tabelaf.setVisible(true);
 			tabelam.setVisible(false);

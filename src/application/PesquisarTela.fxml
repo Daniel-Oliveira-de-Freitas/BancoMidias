@@ -37,12 +37,12 @@
             </Label>
             <ImageView fitHeight="100.0" fitWidth="274.0" layoutX="274.0" layoutY="124.0">
                <image>
-                  <Image url="@../../../../../Creative%20Cloud%20Files/filmes.png" />
+                  <Image url="@../../imagens/filmes.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="116.0" fitWidth="175.0" layoutX="60.0" layoutY="118.0">
                <image>
-                  <Image url="@../../../../../Creative%20Cloud%20Files/NoPath.png" />
+                  <Image url="@../../imagens/fotos.png" />
                </image>
             </ImageView>
             <Label layoutX="324.0" layoutY="319.0" text="Escolha seu tipo de midia:" textFill="#1e1d1d">
