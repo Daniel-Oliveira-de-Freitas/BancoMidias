@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -21,30 +20,30 @@
                   <Image url="@../../imagens/Retângulo%2038.png" />
                </image>
             </ImageView>
-            <TextField fx:id="barradepesquisa" layoutX="274.0" layoutY="95.0" prefHeight="25.0" prefWidth="283.0" />
             <Label layoutX="325.0" layoutY="-4.0" prefHeight="93.0" prefWidth="244.0" text="Excluir" textFill="#222222">
                <font>
                   <Font name="Modern No. 20" size="64.0" />
                </font>
             </Label>
-            <RadioButton layoutX="328.0" layoutY="128.0" mnemonicParsing="false" text="Foto" textFill="#222222">
+            <RadioButton layoutX="328.0" layoutY="95.0" mnemonicParsing="false" text="Foto" textFill="#222222">
                <toggleGroup>
                   <ToggleGroup fx:id="TipoMidia" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton layoutX="391.0" layoutY="128.0" mnemonicParsing="false" text="Música" textFill="#222222">
+            <RadioButton layoutX="391.0" layoutY="95.0" mnemonicParsing="false" text="Música" textFill="#222222">
                <toggleGroup>
                   <ToggleGroup fx:id="TipoMidia1" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton layoutX="464.0" layoutY="128.0" mnemonicParsing="false" text="Filme" textFill="#222222">
+            <RadioButton layoutX="464.0" layoutY="95.0" mnemonicParsing="false" text="Filme" textFill="#222222">
                <toggleGroup>
                   <ToggleGroup fx:id="TipoMidia2" />
                </toggleGroup>
             </RadioButton>
-            <ListView fx:id="exibeMidias" layoutX="98.0" layoutY="156.0" prefHeight="195.0" prefWidth="632.0" />
+            <ListView fx:id="exibeMidias" layoutX="98.0" layoutY="123.0" prefHeight="195.0" prefWidth="632.0" />
             <Button layoutX="719.0" layoutY="365.0" mnemonicParsing="false" onAction="#acaobotaovoltar" prefHeight="25.0" prefWidth="69.0" text="Voltar" />
-            <Button layoutX="568.0" layoutY="95.0" mnemonicParsing="false" onAction="#botaoPesquisa" text="P" />
+            <Button layoutX="10.0" layoutY="364.0" mnemonicParsing="false" onAction="#acaobotaovoltar" prefHeight="25.0" prefWidth="69.0" text="Atualizar" />
+            <Button layoutX="719.0" layoutY="334.0" mnemonicParsing="false" onAction="#acaobotaovoltar" prefHeight="25.0" prefWidth="69.0" text="X" textFill="#ee0b0b" />
          </children></Pane>
    </children>
 </AnchorPane>
