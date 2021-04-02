@@ -200,6 +200,15 @@ public class ExibirController implements Initializable{
 	          }
 	      } catch (IOException n) {System.out.println("Oi");}
 			tabelaf.setItems(itemsfilme);
+			localarquivom.setCellValueFactory(new PropertyValueFactory<String,Musica>("CaminhoArquivo"));
+			titulomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("titulo"));
+			descricaomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("descricao"));
+			generomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("genero"));
+			idiomamusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("idioma"));
+			autoresmusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("diretores"));
+			interpretesmusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("atoresprincipais"));
+			duracaomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("duracao"));
+			anomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("ano"));
 			localarquivof.setCellValueFactory(new PropertyValueFactory<String,Filme>("CaminhoArquivo"));
 			titulof.setCellValueFactory(new PropertyValueFactory<String,Filme>("titulo"));
 			descricaof.setCellValueFactory(new PropertyValueFactory<String,Filme>("descricao"));

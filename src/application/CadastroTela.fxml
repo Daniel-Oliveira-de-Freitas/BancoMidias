@@ -21,7 +21,7 @@
                </image>
             </ImageView>
             <Button layoutX="165.0" layoutY="27.0" mnemonicParsing="false" onAction="#EscolhaCaminho" prefHeight="25.0" prefWidth="22.0" text="..." />
-            <Label layoutX="491.0" layoutY="36.0" prefHeight="70.0" prefWidth="266.0" text="Cadastrar">
+            <Label layoutX="464.0" layoutY="27.0" prefHeight="93.0" prefWidth="322.0" text="Cadastrar">
                <font>
                   <Font name="Modern No. 20" size="64.0" />
                </font>
