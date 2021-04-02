@@ -6,6 +6,8 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -14,6 +16,11 @@
    <children>
       <Pane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #87CEFA;">
          <children>
+            <ImageView fitHeight="709.0" fitWidth="727.0" layoutX="233.0" layoutY="-89.0">
+               <image>
+                  <Image url="@../../imagens/Retângulo%2038.png" />
+               </image>
+            </ImageView>
             <TextField fx:id="barradepesquisa" layoutX="274.0" layoutY="95.0" prefHeight="25.0" prefWidth="283.0" />
             <Label layoutX="325.0" layoutY="-4.0" prefHeight="93.0" prefWidth="244.0" text="Excluir" textFill="#222222">
                <font>
