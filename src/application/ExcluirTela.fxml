@@ -34,7 +34,7 @@
             <RadioButton fx:id="musicaid" layoutX="391.0" layoutY="95.0" mnemonicParsing="false" text="Música" textFill="#222222" toggleGroup="$TipoMidia" />
             <RadioButton fx:id="filmeid" layoutX="464.0" layoutY="95.0" mnemonicParsing="false" text="Filme" textFill="#222222" toggleGroup="$TipoMidia" />
             <Button layoutX="715.0" layoutY="360.0" mnemonicParsing="false" onAction="#acaobotaovoltar" prefHeight="25.0" prefWidth="69.0" text="Voltar" />
-            <Button layoutX="4.0" layoutY="357.0" mnemonicParsing="false" onAction="#acaobotaovoltar" prefHeight="25.0" prefWidth="69.0" text="Atualizar" />
+            <Button layoutX="4.0" layoutY="357.0" mnemonicParsing="false" onAction="#Atualizar" prefHeight="25.0" prefWidth="69.0" text="Atualizar" />
             <TableView fx:id="tabelaf" layoutX="96.0" layoutY="154.0" prefHeight="200.0" prefWidth="640.0">
                <columns>
                   <TableColumn fx:id="localarquivof" prefWidth="204.0" text="CaminhoArquivo" />
