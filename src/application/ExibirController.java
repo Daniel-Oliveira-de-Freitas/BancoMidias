@@ -84,7 +84,7 @@ public class ExibirController implements Initializable{
 	@FXML
 	private TableColumn<String,Filme> atoresprincipaisf;
 	@FXML
-	private TableColumn<String,Filme> duracaf;
+	private TableColumn<String,Filme> duracaof;
 	@FXML
 	private TableColumn<String,Filme> anof;
 	
@@ -209,6 +209,15 @@ public class ExibirController implements Initializable{
 			interpretesmusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("atoresprincipais"));
 			duracaomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("duracao"));
 			anomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("ano"));
+			localarquivof.setCellValueFactory(new PropertyValueFactory<String,Filme>("CaminhoArquivo"));
+			titulof.setCellValueFactory(new PropertyValueFactory<String,Filme>("titulo"));
+			descricaof.setCellValueFactory(new PropertyValueFactory<String,Filme>("descricao"));
+			generof.setCellValueFactory(new PropertyValueFactory<String,Filme>("genero"));
+			idiomaf.setCellValueFactory(new PropertyValueFactory<String,Filme>("idioma"));
+			diretoresf.setCellValueFactory(new PropertyValueFactory<String,Filme>("diretores"));
+			atoresprincipaisf.setCellValueFactory(new PropertyValueFactory<String,Filme>("atoresprincipais"));
+			duracaof.setCellValueFactory(new PropertyValueFactory<String,Filme>("duracao"));
+			anof.setCellValueFactory(new PropertyValueFactory<String,Filme>("ano"));
 			tabelaf.refresh();	
 		}
 	

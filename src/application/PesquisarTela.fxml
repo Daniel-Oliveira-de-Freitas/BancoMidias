@@ -16,6 +16,11 @@
    <children>
       <Pane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #87CEFA">
          <children>
+            <ImageView fitHeight="760.0" fitWidth="782.0" layoutX="185.0" layoutY="-99.0">
+               <image>
+                  <Image url="@../../imagens/Retângulo%2038.png" />
+               </image>
+            </ImageView>
             <Button fx:id="botaPesquisa" layoutX="581.0" layoutY="251.0" mnemonicParsing="false" onAction="#acaobotaopesquisar" prefHeight="25.0" prefWidth="26.0" text="P" />
             <Button layoutX="728.0" layoutY="359.0" mnemonicParsing="false" onAction="#acaobotaovoltar" prefHeight="25.0" prefWidth="55.0" text="voltar" />
             <TextField fx:id="barradepesquisa" layoutX="228.0" layoutY="252.0" prefHeight="25.0" prefWidth="354.0" />
