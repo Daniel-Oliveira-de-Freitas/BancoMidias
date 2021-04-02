@@ -48,18 +48,48 @@ public class ProcessamentoMidia {
 		   }
 			
 		}
-		return "Não há midia desse tipo cadastrada";
+		return "Não há midia desse tipo cadastrada"; 
 	}
-	public boolean excluifoto(String t) {
+	public boolean excluifoto(String string) {
 		Foto foto = null;
 		for (Foto fotosb : fotos) {
-			if (t.equals(fotosb.getTitulo())) {
+			if (string.equals(fotosb.getTitulo())) {
 				foto = fotosb; // recebe o codigo do produto
 			}
 		}
 
 		if (foto != null) { // verfica se é diferente de null se for irá remover o produto
 			fotos.remove(foto);
+			return true;
+		}
+		return false;
+	}
+	//musica
+	public boolean excluimusica(String string) {
+		Musica musica = null;
+		for (Musica musicasb : musicas) {
+			if (string.equals(musicasb.getTitulo())) {
+				musica = musicasb; // recebe o codigo do produto
+			}
+		}
+
+		if (musica != null) { // verfica se é diferente de null se for irá remover o produto
+			musicas.remove(musica);
+			return true;
+		}
+		return false;
+	}
+	//filme
+	public boolean excluifilme(String string) {
+		Filme filme = null;
+		for (Filme filmesb : filmes) {
+			if (string.equals(filmesb.getTitulo())) {
+				filme = filmesb; // recebe o codigo do produto
+			}
+		}
+
+		if (filme != null) { // verfica se é diferente de null se for irá remover o produto
+			filmes.remove(filme);
 			return true;
 		}
 		return false;

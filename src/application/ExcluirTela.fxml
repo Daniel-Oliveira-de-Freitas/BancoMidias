@@ -4,7 +4,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -12,32 +13,45 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ExcluirController">
    <children>
-      <Pane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #87CEFA;">
+      <Pane prefHeight="388.0" prefWidth="790.0" style="-fx-background-color: #87CEFA;">
          <children>
-            <TextField fx:id="barradepesquisa" layoutX="274.0" layoutY="95.0" prefHeight="25.0" prefWidth="283.0" />
             <Label layoutX="325.0" layoutY="-4.0" prefHeight="93.0" prefWidth="244.0" text="Excluir" textFill="#222222">
                <font>
                   <Font name="Modern No. 20" size="64.0" />
                </font>
             </Label>
-            <RadioButton layoutX="328.0" layoutY="128.0" mnemonicParsing="false" text="Foto" textFill="#222222">
+            <RadioButton fx:id="fotoid" layoutX="323.0" layoutY="95.0" mnemonicParsing="false" text="Foto" textFill="#222222">
                <toggleGroup>
-                  <ToggleGroup fx:id="TipoMidia" />
+                  <ToggleGroup fx:id="Grupodelete" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton layoutX="391.0" layoutY="128.0" mnemonicParsing="false" text="Música" textFill="#222222">
-               <toggleGroup>
-                  <ToggleGroup fx:id="TipoMidia1" />
-               </toggleGroup>
-            </RadioButton>
-            <RadioButton layoutX="464.0" layoutY="128.0" mnemonicParsing="false" text="Filme" textFill="#222222">
-               <toggleGroup>
-                  <ToggleGroup fx:id="TipoMidia2" />
-               </toggleGroup>
-            </RadioButton>
+            <RadioButton fx:id="musicaid" layoutX="386.0" layoutY="95.0" mnemonicParsing="false" text="Música" textFill="#222222" toggleGroup="$Grupodelete" />
+            <RadioButton fx:id="filmeid" layoutX="459.0" layoutY="95.0" mnemonicParsing="false" text="Filme" textFill="#222222" toggleGroup="$Grupodelete" />
             <ListView fx:id="exibeMidias" layoutX="98.0" layoutY="156.0" prefHeight="195.0" prefWidth="632.0" />
             <Button layoutX="719.0" layoutY="365.0" mnemonicParsing="false" onAction="#acaobotaovoltar" prefHeight="25.0" prefWidth="69.0" text="Voltar" />
-            <Button layoutX="568.0" layoutY="95.0" mnemonicParsing="false" onAction="#botaoPesquisa" text="P" />
+            <TableView fx:id="tabelaf" layoutX="96.0" layoutY="154.0" prefHeight="200.0" prefWidth="640.0">
+               <columns>
+                  <TableColumn fx:id="localarquivof" prefWidth="204.0" text="CaminhoArquivo" />
+                  <TableColumn fx:id="titulomusif" prefWidth="205.0" text="Titulo" />
+                  <TableColumn fx:id="descricaof" prefWidth="230.0" text="Descrição" />
+               </columns>
+            </TableView>
+            <Button layoutX="754.0" layoutY="329.0" mnemonicParsing="false" onAction="#onDeleteButton" text="X" textFill="#ff0707" />
+            <TableView fx:id="tabelam" layoutX="94.0" layoutY="155.0" prefHeight="209.0" prefWidth="652.0">
+               <columns>
+                  <TableColumn fx:id="localarquivom" prefWidth="204.0" text="CaminhoArquivo" />
+                  <TableColumn fx:id="descricaomusic" prefWidth="230.0" text="Descrição" />
+                  <TableColumn fx:id="titulomusic" prefWidth="205.0" text="Titulo" />
+               </columns>
+            </TableView>
+            <TableView fx:id="tabela" layoutX="79.0" layoutY="145.0" prefHeight="219.0" prefWidth="670.0">
+               <columns>
+                  <TableColumn fx:id="localarquivo" prefWidth="204.0" text="CaminhoArquivo" />
+                  <TableColumn fx:id="desc" prefWidth="230.0" text="Descrição" />
+                  <TableColumn fx:id="titulo" prefWidth="205.0" text="Titulo" />
+               </columns>
+            </TableView>
+            <Button layoutX="10.0" layoutY="365.0" mnemonicParsing="false" onAction="#Atualizar" prefHeight="25.0" prefWidth="69.0" text="Atualizar" />
          </children></Pane>
    </children>
 </AnchorPane>

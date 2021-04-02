@@ -209,7 +209,7 @@ public class ExibirController implements Initializable{
 			interpretesmusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("atoresprincipais"));
 			duracaomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("duracao"));
 			anomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("ano"));
-			tabelam.refresh();	
+			tabelaf.refresh();	
 		}
 	
 	@Override
