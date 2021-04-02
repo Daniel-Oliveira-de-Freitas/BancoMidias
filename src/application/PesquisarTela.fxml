@@ -14,18 +14,18 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PesquisaController">
    <children>
-      <Pane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #25294B;">
+      <Pane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #87CEFA">
          <children>
             <Button fx:id="botaPesquisa" layoutX="581.0" layoutY="251.0" mnemonicParsing="false" onAction="#acaobotaopesquisar" prefHeight="25.0" prefWidth="26.0" text="P" />
             <Button layoutX="728.0" layoutY="359.0" mnemonicParsing="false" onAction="#acaobotaovoltar" prefHeight="25.0" prefWidth="55.0" text="voltar" />
             <TextField fx:id="barradepesquisa" layoutX="228.0" layoutY="252.0" prefHeight="25.0" prefWidth="354.0" />
-            <Label layoutX="351.0" layoutY="292.0" prefHeight="17.0" prefWidth="170.0" text="Digite o nome ou código" textFill="#f8f5f5">
+            <Label layoutX="351.0" layoutY="292.0" prefHeight="17.0" prefWidth="170.0" text="Digite o nome ou código" textFill="#1e1d1d">
                <font>
                   <Font size="13.0" />
                </font>
             </Label>
             <ButtonBar layoutX="579.0" layoutY="353.0" />
-            <Label layoutX="297.0" layoutY="16.0" prefHeight="91.0" prefWidth="295.0" text="Pesquisar" textFill="WHITE">
+            <Label layoutX="297.0" layoutY="16.0" prefHeight="91.0" prefWidth="295.0" text="Pesquisar" textFill="#1e1d1d">
                <font>
                   <Font name="Modern No. 20" size="64.0" />
                </font>
@@ -40,17 +40,17 @@
                   <Image url="@../../../../../Creative%20Cloud%20Files/NoPath.png" />
                </image>
             </ImageView>
-            <Label layoutX="324.0" layoutY="319.0" text="Escolha seu tipo de midia:" textFill="#f6f5f8">
+            <Label layoutX="324.0" layoutY="319.0" text="Escolha seu tipo de midia:" textFill="#1e1d1d">
                <font>
                   <Font name="Segoe UI" size="18.0" />
                </font>
             </Label>
-            <RadioButton fx:id="fotoid" layoutX="336.0" layoutY="363.0" mnemonicParsing="false" text="Foto" textFill="#f5f5f5">
+            <RadioButton fx:id="fotoid" layoutX="336.0" layoutY="363.0" mnemonicParsing="false" text="Foto" textFill="#1e1d1d">
                <toggleGroup>
                   <ToggleGroup fx:id="TipoMidia" />
                </toggleGroup></RadioButton>
-            <RadioButton fx:id="musicaid" layoutX="394.0" layoutY="363.0" mnemonicParsing="false" text="Música" textFill="#f5f5f5" toggleGroup="$TipoMidia" />
-            <RadioButton fx:id="filmeid" layoutX="467.0" layoutY="363.0" mnemonicParsing="false" text="Filme" textFill="#f5f5f5" toggleGroup="$TipoMidia" />
+            <RadioButton fx:id="musicaid" layoutX="394.0" layoutY="363.0" mnemonicParsing="false" text="Música" textFill="#1e1d1d" toggleGroup="$TipoMidia" />
+            <RadioButton fx:id="filmeid" layoutX="467.0" layoutY="363.0" mnemonicParsing="false" text="Filme" textFill="#1e1d1d" toggleGroup="$TipoMidia" />
             <ImageView fitHeight="116.0" fitWidth="175.0" layoutX="585.0" layoutY="122.0">
                <image>
                   <Image url="@../../imagens/Imagem%201.png" />

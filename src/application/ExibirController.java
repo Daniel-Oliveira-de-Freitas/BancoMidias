@@ -67,6 +67,27 @@ public class ExibirController implements Initializable{
 	@FXML
 	private TableColumn<String,Musica> anomusic;
 	
+	@FXML
+	private TableView <Filme> tabelaf;
+	@FXML
+	private TableColumn<String,Filme> localarquivof;
+	@FXML
+	private TableColumn<String,Filme> titulof;
+	@FXML
+	private TableColumn<String,Filme> descricaof;
+	@FXML
+	private TableColumn<String,Filme> generof;
+	@FXML
+	private TableColumn<String,Filme> idiomaf;
+	@FXML
+	private TableColumn<String,Filme> diretoresf;
+	@FXML
+	private TableColumn<String,Filme> atoresprincipaisf;
+	@FXML
+	private TableColumn<String,Filme> duracaf;
+	@FXML
+	private TableColumn<String,Filme> anof;
+	
 
 	public void acaobotaovoltar(){
 		Main.changeScene("main");
@@ -76,9 +97,16 @@ public class ExibirController implements Initializable{
 		tabelaFoto();
 		tabelam.setVisible(false);
 		tabela.setVisible(true);
+		tabelaf.setVisible(false);
 		}else if(musicaid.isSelected()) {
 			tabelaMusica();
 			tabelam.setVisible(true);
+			tabela.setVisible(false);
+			tabelaf.setVisible(false);
+		}else if(musicaid.isSelected()) {
+			tabelaFilme();
+			tabelaf.setVisible(true);
+			tabelam.setVisible(false);
 			tabela.setVisible(false);
 		}
 	
@@ -145,6 +173,40 @@ public class ExibirController implements Initializable{
 			idiomamusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("idioma"));
 			autoresmusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("autores"));
 			interpretesmusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("interpretes"));
+			duracaomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("duracao"));
+			anomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("ano"));
+			tabelam.refresh();	
+		}
+	
+	public void tabelaFilme() {
+		 String caminholocalf = null, titulofil = null, descricaofil = null,generofil = null,idiomafil = null,diretoresfil = null,atoresprincipaisfil = null,duracaofil = null,anofil = null,linha;
+		 ObservableList<Filme> itemsfilme = FXCollections.observableArrayList();
+	      try {
+	          FileReader fr = new FileReader(Main.filmefile());
+	          BufferedReader br = new BufferedReader(fr);
+	          while (br.ready()) {
+	              linha = br.readLine();  
+	              String dados[] = linha.split(";");
+	              caminholocalf = dados[0];
+	              titulofil = dados[1];
+	              descricaofil = dados[2];
+	              generofil  = dados[3];
+	              idiomafil = dados[4];
+	              diretoresfil = dados[5];
+	              atoresprincipaisfil = dados[6];
+	              duracaofil = dados[7];
+	              anofil = dados[8];
+	              itemsfilme.add(new Filme(caminholocalf, titulofil, descricaofil, generofil, idiomafil, diretoresfil,atoresprincipaisfil , duracaofil,anofil));
+	          }
+	      } catch (IOException n) {System.out.println("Oi");}
+			tabelaf.setItems(itemsfilme);
+			localarquivom.setCellValueFactory(new PropertyValueFactory<String,Musica>("CaminhoArquivo"));
+			titulomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("titulo"));
+			descricaomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("descricao"));
+			generomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("genero"));
+			idiomamusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("idioma"));
+			autoresmusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("diretores"));
+			interpretesmusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("atoresprincipais"));
 			duracaomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("duracao"));
 			anomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("ano"));
 			tabelam.refresh();	

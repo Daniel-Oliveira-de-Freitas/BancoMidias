@@ -13,30 +13,30 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EditaController">
    <children>
-      <Pane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #25294B;">
+      <Pane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #87CEFA;">
          <children>
             <ImageView fitHeight="885.0" fitWidth="836.0" layoutX="121.0" layoutY="-175.0">
                <image>
                   <Image url="@../../../../../Creative%20Cloud%20Files/Retângulo%2038.png" />
                </image>
             </ImageView>
-            <Label layoutX="335.0" layoutY="11.0" prefHeight="70.0" prefWidth="181.0" text="Editar" textFill="#f8f8f8">
+            <Label layoutX="335.0" layoutY="11.0" prefHeight="70.0" prefWidth="181.0" text="Editar" textFill="#171717">
                <font>
                   <Font name="Modern No. 20" size="64.0" />
                </font>
             </Label>
-            <Label layoutX="89.0" layoutY="103.0" text="Escolha seu tipo de midia:" textFill="#f5f5f5">
+            <Label layoutX="89.0" layoutY="103.0" text="Escolha seu tipo de midia:" textFill="#171717">
                <font>
                   <Font name="Segoe UI" size="18.0" />
                </font>
             </Label>
             <Button layoutX="712.0" layoutY="358.0" mnemonicParsing="false" onAction="#acaobotaovoltar" prefHeight="25.0" prefWidth="69.0" text="Voltar" />
-            <RadioButton fx:id="foto" layoutX="101.0" layoutY="147.0" mnemonicParsing="false" onAction="#acaoescolha" text="Foto" textFill="#f5f5f5">
+            <RadioButton fx:id="foto" layoutX="101.0" layoutY="147.0" mnemonicParsing="false" onAction="#acaoescolha" text="Foto" textFill="#171717">
                <toggleGroup>
                   <ToggleGroup fx:id="TipoMidia" />
                </toggleGroup></RadioButton>
-            <RadioButton fx:id="musica" layoutX="159.0" layoutY="147.0" mnemonicParsing="false" onAction="#acaoescolha" text="Música" textFill="#f5f5f5" toggleGroup="$TipoMidia" />
-            <RadioButton fx:id="filme" layoutX="232.0" layoutY="147.0" mnemonicParsing="false" onAction="#acaoescolha" text="Filme" textFill="#f5f5f5" toggleGroup="$TipoMidia" />
+            <RadioButton fx:id="musica" layoutX="159.0" layoutY="147.0" mnemonicParsing="false" onAction="#acaoescolha" text="Música" textFill="#171717" toggleGroup="$TipoMidia" />
+            <RadioButton fx:id="filme" layoutX="232.0" layoutY="147.0" mnemonicParsing="false" onAction="#acaoescolha" text="Filme" textFill="#171717" toggleGroup="$TipoMidia" />
             <TextField fx:id="caminhoarquivo" layoutX="384.0" layoutY="119.0" />
             <Label fx:id="caminhoarquivoid" layoutX="385.0" layoutY="98.0" text="Caminho do arquivo" textFill="WHITE" />
             <TextField fx:id="titulo" layoutX="384.0" layoutY="174.0" />
@@ -56,8 +56,8 @@
             <TextField fx:id="ano" layoutX="586.0" layoutY="287.0" />
             <Label fx:id="anoid" layoutX="582.0" layoutY="266.0" text="Ano" textFill="WHITE" />
             <Button layoutX="94.0" layoutY="298.0" mnemonicParsing="false" onAction="#acaobotaosalvar" prefHeight="50.0" prefWidth="176.0" style="-fx-background-color: #4B83F2; -fx-background-radius: 15;" text="Salvar Mídia" textFill="WHITE" />
-            <TextField layoutX="83.0" layoutY="220.0" prefHeight="25.0" prefWidth="181.0" />
-            <Label layoutX="116.0" layoutY="194.0" prefHeight="17.0" prefWidth="170.0" text="Digite o nome ou código" textFill="#f8f5f5">
+            <TextField layoutX="94.0" layoutY="220.0" prefHeight="25.0" prefWidth="181.0" />
+            <Label layoutX="116.0" layoutY="194.0" prefHeight="17.0" prefWidth="170.0" text="Digite o nome ou código" textFill="#171717">
                <font>
                   <Font size="13.0" />
                </font>
