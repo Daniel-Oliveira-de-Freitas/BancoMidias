@@ -48,9 +48,11 @@ public abstract class AudioVisual extends Midia{
 	}
 	
 	public String toString() {
-		return  super.toString() +
-				" Genero: " +'\n'+ genero +'\n'+ " Idioma: "+ idioma +"\n"+
-				" Duração: "+ duracao+'\n'+ " Ano: " + ano;
+		return  super.toString() +"\n"+
+				" Genero: " + genero +"\n"+
+				" Idioma: "+ idioma +"\n"+
+				" Duração: "+ duracao+'\n'+ 
+				" Ano: " + ano;
 	}
 
 }

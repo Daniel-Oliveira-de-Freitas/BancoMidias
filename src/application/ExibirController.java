@@ -199,17 +199,17 @@ public class ExibirController implements Initializable{
 	              itemsfilme.add(new Filme(caminholocalf, titulofil, descricaofil, generofil, idiomafil, diretoresfil,atoresprincipaisfil , duracaofil,anofil));
 	          }
 	      } catch (IOException n) {System.out.println("Oi");}
-			tabelaf.setItems(itemsfilme);
-			localarquivof.setCellValueFactory(new PropertyValueFactory<String,Filme>("CaminhoArquivo"));
-			titulof.setCellValueFactory(new PropertyValueFactory<String,Filme>("titulo"));
-			descricaof.setCellValueFactory(new PropertyValueFactory<String,Filme>("descricao"));
-			generof.setCellValueFactory(new PropertyValueFactory<String,Filme>("genero"));
-			idiomaf.setCellValueFactory(new PropertyValueFactory<String,Filme>("idioma"));
-			diretoresf.setCellValueFactory(new PropertyValueFactory<String,Filme>("diretores"));
-			atoresprincipaisf.setCellValueFactory(new PropertyValueFactory<String,Filme>("atoresprincipais"));
-			duracaof.setCellValueFactory(new PropertyValueFactory<String,Filme>("duracao"));
-			anof.setCellValueFactory(new PropertyValueFactory<String,Filme>("ano"));
-			tabelaf.refresh();	
+	      tabelaf.setItems(itemsfilme);
+	        localarquivof.setCellValueFactory(new PropertyValueFactory<String, Filme>("CaminhoArquivo"));
+	        titulof.setCellValueFactory(new PropertyValueFactory<String, Filme>("titulo"));
+	        descricaof.setCellValueFactory(new PropertyValueFactory<String, Filme>("descricao"));
+	        generof.setCellValueFactory(new PropertyValueFactory<String, Filme>("genero"));
+	        idiomaf.setCellValueFactory(new PropertyValueFactory<String, Filme>("idioma"));
+	        diretoresf.setCellValueFactory(new PropertyValueFactory<String, Filme>("diretor"));
+	        atoresprincipaisf.setCellValueFactory(new PropertyValueFactory<String, Filme>("atoresPrincipais"));
+	        duracaof.setCellValueFactory(new PropertyValueFactory<String, Filme>("duracao"));
+	        anof.setCellValueFactory(new PropertyValueFactory<String, Filme>("ano"));
+	        tabelaf.refresh();
 		}
 	
 	@Override

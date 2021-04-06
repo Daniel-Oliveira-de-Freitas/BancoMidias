@@ -62,7 +62,7 @@
             <TableView fx:id="tabelaf" layoutX="101.0" layoutY="161.0" prefHeight="200.0" prefWidth="632.0">
                <columns>
                   <TableColumn fx:id="localarquivof" prefWidth="75.0" text="CaminhoArquivo" />
-                  <TableColumn fx:id="titulomusif" prefWidth="75.0" text="Titulo" />
+                  <TableColumn fx:id="titulof" prefWidth="75.0" text="Titulo" />
                   <TableColumn fx:id="descricaof" prefWidth="75.0" text="Descrição" />
                   <TableColumn fx:id="generof" prefWidth="75.0" text="Genero" />
                   <TableColumn fx:id="idiomaf" prefWidth="75.0" text="Idioma" />

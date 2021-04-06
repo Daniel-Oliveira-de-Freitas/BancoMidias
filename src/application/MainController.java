@@ -94,7 +94,7 @@ public class MainController implements Initializable{
 	          }
 	      }catch (IOException e) {}
 		try {
-			FileReader fr = new FileReader(Main.musicafile());
+			FileReader fr = new FileReader(Main.filmefile());
 			BufferedReader br = new BufferedReader(fr);
 			while (br.ready()) {
 				linha = br.readLine();

@@ -129,9 +129,9 @@ public class ExcluirController {
 	          }
 	      } catch (IOException n) {System.out.println("Oi");}
 			tabelaf.setItems(itemsfilme);
-			localarquivom.setCellValueFactory(new PropertyValueFactory<String,Musica>("CaminhoArquivo"));
-			titulomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("titulo"));
-			descricaomusic.setCellValueFactory(new PropertyValueFactory<String,Musica>("descricao"));			
+			localarquivof.setCellValueFactory(new PropertyValueFactory<String,Filme>("CaminhoArquivo"));
+			titulof.setCellValueFactory(new PropertyValueFactory<String,Filme>("titulo"));
+			descricaof.setCellValueFactory(new PropertyValueFactory<String,Filme>("descricao"));			
 			tabelaf.refresh();	
 		} 
 		

@@ -142,7 +142,7 @@ public class ProcessamentoMidia {
 			FileWriter fc = new FileWriter(Main.filmefile());
 			BufferedWriter bc = new BufferedWriter(fc);
 			for(Filme f : filmes) {
-			linha = f.getCaminhoArquivo() + ";" + f.getTitulo() + ";" + f.getDescricao() + ";" + f.getGenero() + ";" + f.getIdioma() + ";" + f.getDiretor()+ f.getAtoresPrincipais() + ";" + f.getDuracao() + ";" + f.getAno() + ";";
+			linha = f.getCaminhoArquivo() + ";" + f.getTitulo() + ";" + f.getDescricao() + ";" + f.getGenero() + ";" + f.getIdioma() + ";" + f.getDiretor()+ ";" + f.getAtoresPrincipais() + ";" + f.getDuracao() + ";" + f.getAno() + ";";
 			bc.write(linha);
 			bc.newLine();
 			}

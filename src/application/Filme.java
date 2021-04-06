@@ -1,12 +1,11 @@
 package application;
 
-    class Filme extends AudioVisual {
+   public class Filme extends AudioVisual {
 	
 	
 	private String diretor;
 	private String atoresPrincipais;
-	private String duracao;
-	private String ano;
+	
 
 	
 	    public Filme( String caminhoArquivo,String titulo,String descricao, String genero, String idioma, String diretor, String atoresPrincipais, String duracao, String ano) {
@@ -37,7 +36,8 @@ package application;
 	
 	
 	public String toString() {
-		return (super.toString() +"\n"+ " Diretor: "+ diretor+'\n'+ " Atores Principais " + atoresPrincipais);
+		return (super.toString() +"\n"+ " Diretor: "+ diretor+'\n'+ 
+				              " Atores Principais: " + atoresPrincipais);
 	}
 
 }
