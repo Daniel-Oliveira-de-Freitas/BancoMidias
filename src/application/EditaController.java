@@ -54,6 +54,8 @@ public class EditaController {
 	private RadioButton musica;
 	@FXML 
 	private RadioButton filme;
+	@FXML
+	private TextField edita;
 	
 	public void acaobotaosalvar(){
 		Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -68,7 +70,6 @@ public class EditaController {
 					acaobotaovoltar();
 				}else if(foto.isSelected())	{
 					avisoSucesso();
-					salvarFoto();
 					acaobotaovoltar();
 				}else if(!filme.isSelected()) {
 					avisoMidia();
@@ -84,6 +85,44 @@ public class EditaController {
 				alert.showAndWait();
 				}
 	}
+	
+	public void acaobotaoeditar() {
+		Alert alert = new Alert(Alert.AlertType.WARNING);
+		
+			if(filme.isSelected()) {
+				pesquisaFilme();
+				acaobotaovoltar();
+			}else if (musica.isSelected()) {
+				salvarMusica();
+				acaobotaovoltar();
+			}else if(foto.isSelected())	{		
+			
+			}else if(!filme.isSelected()) {
+				avisoMidia();
+			}else if(!musica.isSelected()) {
+				avisoMidia();
+			}else if(!foto.isSelected()) {
+				avisoMidia();
+			}
+		else {
+			alert.setTitle("Atenção");
+			alert.setContentText("Preencha todos os campos para poder salvar");
+			alert.setHeaderText(null);
+			alert.showAndWait();
+			}
+	}
+	
+	public void pesquisaFilme() {
+		Filme midia;
+		midia = Main.instancia().edicaoFilme(edita.getText());
+		caminhoarquivo.setText(midia.getCaminhoArquivo());
+	}
+	
+	public void salvarFilme() {
+		Filme midia = null;
+		midia.setCaminhoArquivo(caminhoarquivo.getText());
+	}
+	
 	//volta para a tela principal
 	public void acaobotaovoltar(){
 		Main.changeScene("main");
@@ -143,34 +182,7 @@ public class EditaController {
 		            }catch(Exception m) {System.out.println(m);
 		            System.out.println("Deu erro");}
 	}
-	//função que envolve criar um arquivo de texto para filme pegando as informações do campos de texto
-	public void salvarFilme(){
-		 try {
-	    	 File arquivo = new File("/tmp/Filme.txt");
-	            FileWriter fc = new FileWriter(arquivo);
-	            BufferedWriter bc = new BufferedWriter(fc);
-	               String linha = caminhoarquivo.getText() + ";" +titulo.getText() + ";" + descricao.getText() + ";" + genero.getText() + ";" + idioma.getText() + ";" + autores.getText() + ";"+ interpretes.getText()+";"+duracao.getText()+";"+ano.getText()+";";
-	                bc.write(linha);
-	                bc.newLine();
-	                bc.close();
-		            fc.close();
-		            }catch(Exception m) {System.out.println(m);
-		            System.out.println("Deu erro");}
-	}
-	//função que envolve criar um arquivo de texto para foto pegando as informações do campos de texto
-	public void salvarFoto(){
-		 try {
-	    	 File arquivo = new File("/tmp/Foto.txt");
-	            FileWriter fc = new FileWriter(arquivo);
-	            BufferedWriter bc = new BufferedWriter(fc);
-	               String linha = caminhoarquivo.getText() + ";" +titulo.getText() + ";" + descricao.getText() + ";" + genero.getText() + ";" + idioma.getText() + ";" + autores.getText() + ";"+ interpretes.getText()+";";
-	                bc.write(linha);
-	                bc.newLine();
-	                bc.close();
-		            fc.close();
-		            }catch(Exception m) {System.out.println(m);
-		            System.out.println("Deu erro");}
-	}
+	
 	//avisa para ser escolhido um tipo de midia
 	public void avisoMidia() {
 		Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -179,6 +191,7 @@ public class EditaController {
 		alert.setHeaderText(null);
 		alert.showAndWait();
 	}
+	
 	//avisa que a operação foi salva com sucesso
 	public void avisoSucesso() {
 		Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -187,6 +200,7 @@ public class EditaController {
 		alert.setHeaderText(null);
 		alert.showAndWait();
 	}
+	
 	//Quando clica em cima do botao ao lado da caixa de texto de caminho de arquivo abre outra janela
 	public void EscolhaCaminho() {
 		FileChooser fc = new FileChooser();
@@ -203,4 +217,4 @@ public class EditaController {
 		    }
 	}
 
-	}
+}

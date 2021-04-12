@@ -110,8 +110,6 @@ public class ExibirController implements Initializable{
 			tabela.setVisible(false);
 		}
 	
-		
-		
 	}
 	public void tabelaFoto() {
 		 String caminholocal = null, tituloa = null, desca = null,fotografoa = null,pessoasa = null,locala = null,dataa = null,linha;

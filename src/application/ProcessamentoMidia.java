@@ -14,6 +14,16 @@ public class ProcessamentoMidia {
 	public void AdicionarFilme(Filme filme) {
 		filmes.add(filme);
 	}
+	
+	public Filme edicaoFilme(String t) {
+        for(Filme filmesb: filmes) {
+               if(t.equals(filmesb.getTitulo())) {
+                   return filmesb;
+               }
+
+    }
+        return null;
+    }
 
 	public void AdicionarMusica(Musica musica) {
 		musicas.add(musica);
