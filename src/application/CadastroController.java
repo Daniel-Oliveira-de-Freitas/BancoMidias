@@ -80,7 +80,7 @@ public class CadastroController {
 				avisoSucesso();
 				Main.instancia().salvarFilme();
 				acaobotaovoltar();
-
+				limpaCampos();
 			} else if (musica.isSelected()) {
 				String caminho, tituloa, descricaoa, generoa, idiomaa, autoresa, interpretesa, duracaoa, anoa;
 				caminho = caminhoarquivo.getText();
@@ -98,7 +98,7 @@ public class CadastroController {
 				avisoSucesso();
 				Main.instancia().salvarMusica();
 				acaobotaovoltar();
-
+				limpaCampos();
 			} else if (foto.isSelected()) {
 				String caminho, tituloa, descricaoa, fotografoa, pessoasa, locala, dataa;
 				caminho = caminhoarquivo.getText();
@@ -114,6 +114,7 @@ public class CadastroController {
 				avisoSucesso();
 				Main.instancia().salvarFoto();
 				acaobotaovoltar();
+				limpaCampos();
 
 			} else if (!filme.isSelected()) {
 				avisoMidia();
@@ -214,5 +215,16 @@ public class CadastroController {
 			System.out.println("error");
 		}
 	}
-
+	
+	public void limpaCampos() {
+		caminhoarquivo.setText(null);
+		titulo.setText(null);
+		descricao.setText(null);
+		genero.setText(null);
+		idioma.setText(null);
+		autores.setText(null);
+		interpretes.setText(null);
+		duracao.setText(null);
+		ano.setText(null);
+	}
 }

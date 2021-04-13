@@ -28,8 +28,28 @@ public class ProcessamentoMidia {
 	public void AdicionarMusica(Musica musica) {
 		musicas.add(musica);
 	}
+	
+	public Musica edicaoMusica(String t) {
+        for(Musica musicasb: musicas) {
+               if(t.equals(musicasb.getTitulo())) {
+                   return musicasb;
+               }
+
+    }
+        return null;
+	}
 	public void AdicionarFoto(Foto foto) {
 		fotos.add(foto);
+	}
+	
+	public Foto edicaoFoto(String t) {
+        for(Foto fotosb: fotos) {
+               if(t.equals(fotosb.getTitulo())) {
+                   return fotosb;
+               }
+
+    }
+        return null;
 	}
 	
 	public String procuraFoto(String t) {

@@ -4,6 +4,8 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 
+
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
@@ -61,15 +63,19 @@ public class EditaController {
 		Alert alert = new Alert(Alert.AlertType.WARNING);
 			if(!titulo.getText().isEmpty()) {
 				if(filme.isSelected()) {
-					avisoSucesso();
 					salvarFilme();
+					Main.instancia().salvarFilme();
+					avisoSucesso();
 					acaobotaovoltar();
 				}else if (musica.isSelected()) {
-					avisoSucesso();
 					salvarMusica();
+					Main.instancia().salvarMusica();
+					avisoSucesso();
 					acaobotaovoltar();
 				}else if(foto.isSelected())	{
-					avisoSucesso();
+					salvarFoto();
+					Main.instancia().salvarFoto();
+					avisoSucesso();					
 					acaobotaovoltar();
 				}else if(!filme.isSelected()) {
 					avisoMidia();
@@ -91,12 +97,12 @@ public class EditaController {
 		
 			if(filme.isSelected()) {
 				pesquisaFilme();
-				acaobotaovoltar();
+				
 			}else if (musica.isSelected()) {
-				salvarMusica();
-				acaobotaovoltar();
+				pesquisaMusica();
+	
 			}else if(foto.isSelected())	{		
-			
+			    pesquisaFoto();
 			}else if(!filme.isSelected()) {
 				avisoMidia();
 			}else if(!musica.isSelected()) {
@@ -116,11 +122,82 @@ public class EditaController {
 		Filme midia;
 		midia = Main.instancia().edicaoFilme(edita.getText());
 		caminhoarquivo.setText(midia.getCaminhoArquivo());
+		titulo.setText(midia.getTitulo());
+		descricao.setText(midia.getDescricao());
+		genero.setText(midia.getGenero());
+		idioma.setText(midia.getIdioma());
+		autores.setText(midia.getDiretor());
+		interpretes.setText(midia.getAtoresPrincipais());
+		duracao.setText(midia.getDuracao());
+		ano.setText(midia.getAno());
 	}
 	
 	public void salvarFilme() {
-		Filme midia = null;
+		Filme midia = null ;
+		midia = Main.instancia().edicaoFilme(edita.getText());
 		midia.setCaminhoArquivo(caminhoarquivo.getText());
+		midia.setTitulo(titulo.getText());
+		midia.setDescricao(descricao.getText());
+		midia.setGenero(genero.getText());
+		midia.setIdioma(idioma.getText());
+		midia.setDiretor(autores.getText());
+		midia.setAtoresPrincipais(interpretes.getText());
+		midia.setDuracao(duracao.getText());
+		midia.setAno(ano.getText());
+	}
+	
+	public void pesquisaMusica() {
+		Musica m;
+		m = Main.instancia().edicaoMusica(edita.getText());
+		caminhoarquivo.setText(m.getCaminhoArquivo());
+		titulo.setText(m.getTitulo());
+		descricao.setText(m.getDescricao());
+		genero.setText(m.getGenero());
+		idioma.setText(m.getIdioma());
+		autores.setText(m.getAutores());
+		interpretes.setText(m.getInterpretes());
+		duracao.setText(m.getDuracao());
+		ano.setText(m.getAno());
+	}
+	
+	public void salvarMusica() {
+		Musica m = null ;
+		m = Main.instancia().edicaoMusica(edita.getText());
+		m.setCaminhoArquivo(caminhoarquivo.getText());
+		m.setTitulo(titulo.getText());
+		m.setDescricao(descricao.getText());
+		m.setGenero(genero.getText());
+		m.setIdioma(idioma.getText());
+		m.setAutores(autores.getText());
+		m.setInterpretes(interpretes.getText());
+		m.setDuracao(duracao.getText());
+		m.setAno(ano.getText());
+	}
+	
+	public void pesquisaFoto() {
+		Foto mid;
+		mid = Main.instancia().edicaoFoto(edita.getText());
+		caminhoarquivo.setText(mid.getCaminhoArquivo());
+		titulo.setText(mid.getTitulo());
+		descricao.setText(mid.getDescricao());
+		genero.setText(mid.getFotografo());
+		idioma.setText(mid.getPessoas());
+		autores.setText(mid.getLocal());
+		interpretes.setText(mid.getData());
+		
+	}
+	
+	public void salvarFoto() {
+		Foto mid = null ;
+		mid = Main.instancia().edicaoFoto(edita.getText());
+		mid.setCaminhoArquivo(caminhoarquivo.getText());
+		mid.setTitulo(titulo.getText());
+		mid.setDescricao(descricao.getText());
+		mid.setFotografo(genero.getText());
+		mid.setPessoas(idioma.getText());
+		mid.setLocal(autores.getText());
+		mid.setData(interpretes.getText());
+		
 	}
 	
 	//volta para a tela principal
@@ -128,6 +205,7 @@ public class EditaController {
 		Main.changeScene("main");
 		retiraSelecao();
 		resetaPosicao();
+		limpaCampos();
 	}
 	//Quando realiza a escolha de um radio button essa função é chamada e reliza sua função escolhida
 	public void acaoescolha() {
@@ -168,20 +246,7 @@ public class EditaController {
 		musica.setSelected(false);
 		foto.setSelected(false);
 	}
-	//função que envolve criar um arquivo de texto para musica pegando as informações do campos de texto
-	public void salvarMusica(){
-		 try {
-	    	 File arquivo = new File("/tmp/Musica.txt");
-	            FileWriter fc = new FileWriter(arquivo);
-	            BufferedWriter bc = new BufferedWriter(fc);
-	               String linha = caminhoarquivo.getText() + ";" +titulo.getText() + ";" + descricao.getText() + ";" + genero.getText() + ";" + idioma.getText() + ";" + autores.getText() + ";"+ interpretes.getText()+";"+duracao.getText()+";"+ano.getText()+";";
-	                bc.write(linha);
-	                bc.newLine();
-	                bc.close();
-		            fc.close();
-		            }catch(Exception m) {System.out.println(m);
-		            System.out.println("Deu erro");}
-	}
+	
 	
 	//avisa para ser escolhido um tipo de midia
 	public void avisoMidia() {
@@ -215,6 +280,18 @@ public class EditaController {
 		    } else  {
 		        System.out.println("error");
 		    }
+	}
+	
+	public void limpaCampos() {
+		caminhoarquivo.setText(null);
+		titulo.setText(null);
+		descricao.setText(null);
+		genero.setText(null);
+		idioma.setText(null);
+		autores.setText(null);
+		interpretes.setText(null);
+		duracao.setText(null);
+		ano.setText(null);
 	}
 
 }
