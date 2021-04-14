@@ -23,8 +23,7 @@ public class Main extends Application {
 	private static File fotofile;
 	private static File filmefile;
 	private static File musicafile;
-	private static Filme filme;
-	
+
 	//	@SuppressWarnings("unused")
 	@Override
 	public void start(Stage primaryStage) throws Exception{

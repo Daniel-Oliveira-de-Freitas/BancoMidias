@@ -141,15 +141,15 @@ public class EditaController {
 		midia.setCaminhoArquivo(caminhoarquivo.getText());
 		midia.setTitulo(titulo.getText());
 		midia.setDescricao(descricao.getText());
+		midia.setDuracao(duracao.getText());
 		midia.setGenero(genero.getText());
 		midia.setIdioma(idioma.getText());
 		midia.setDiretor(autores.getText());
 		midia.setAtoresPrincipais(interpretes.getText());
-		midia.setDuracao(duracao.getText());
+		midia.setDiretor(duracao.getText());
 		midia.setAno(ano.getText());
-		
 	}
-	
+
 	public void pesquisaMusica() {
 		Musica m;
 		m = Main.instancia().edicaoMusica(edita.getText());
@@ -167,7 +167,7 @@ public class EditaController {
 	}
 	
 	public void salvarMusicaEd() {
-		Musica m = null ;
+		Musica m;
 		m = Main.instancia().edicaoMusica(edita.getText());
 		m.setCaminhoArquivo(caminhoarquivo.getText());
 		m.setTitulo(titulo.getText());

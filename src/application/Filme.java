@@ -36,7 +36,7 @@ package application;
 	
 	
 	public String toString() {
-		return (super.toString() +"\n"+ " Diretor: "+ diretor+'\n'+ 
+		return (super.toString() + "\n"+ " Diretor: "+ diretor+'\n'+ 
 				              " Atores Principais: " + atoresPrincipais);
 	}
 

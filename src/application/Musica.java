@@ -30,7 +30,7 @@ public class Musica extends AudioVisual {
 	}
 	
 	public String toString() {
-		return (super.toString() + "Autores: "+ autores + "Interpretes: "+ interpretes);
+		return (super.toString() +'\n'+ "Autores: "+ autores +'\n'+ "Interpretes: "+ interpretes);
 	}
 
 	

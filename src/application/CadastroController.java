@@ -1,14 +1,9 @@
 package application;
 
-import java.io.BufferedWriter;
+
 import java.io.File;
-import java.io.FileWriter;
-import java.util.ArrayList;
 
 import javafx.fxml.FXML;
-
-//import javafx.scene.control.Label;
-
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
@@ -52,82 +47,27 @@ public class CadastroController {
 	private TextField duracao;
 	@FXML
 	private TextField ano;
-	@FXML 
+	@FXML
 	private RadioButton foto;
-	@FXML 
+	@FXML
 	private RadioButton musica;
-	@FXML 
+	@FXML
 	private RadioButton filme;
 
 	public void acaobotaosalvar() {
-		Alert alert = new Alert(Alert.AlertType.WARNING);
-		if (!titulo.getText().isEmpty() && caminhoarquivo.getText().isEmpty() && descricao.getText().isEmpty() && genero.getText().isEmpty() && idioma.getText().isEmpty() && autores.getText().isEmpty() && ano.getText().isEmpty() && duracao.getText().isEmpty() ) {
-			if (filme.isSelected()) {
-				String caminho, tituloa, descricaoa, generoa, idiomaa, diretora, atoresa, duracaoa, anoa;
-				caminho = caminhoarquivo.getText();
-				tituloa = titulo.getText();
-				descricaoa = descricao.getText();
-				generoa = genero.getText();
-				idiomaa = idioma.getText();
-				diretora = autores.getText();
-				atoresa = interpretes.getText();
-				duracaoa = duracao.getText();
-				anoa = ano.getText();
-				Filme filme = new Filme(caminho, tituloa, descricaoa, generoa, idiomaa, diretora, atoresa, duracaoa,
-						anoa);
-				Main.instancia().AdicionarFilme(filme);
-				System.out.println(filme);
-				avisoSucesso();
-				Main.instancia().salvarFilme();
-				acaobotaovoltar();
-				limpaCampos();
-			} else if (musica.isSelected()) {
-				String caminho, tituloa, descricaoa, generoa, idiomaa, autoresa, interpretesa, duracaoa, anoa;
-				caminho = caminhoarquivo.getText();
-				tituloa = titulo.getText();
-				descricaoa = descricao.getText();
-				generoa = genero.getText();
-				idiomaa = idioma.getText();
-				autoresa = autores.getText();
-				interpretesa = interpretes.getText();
-				duracaoa = duracao.getText();
-				anoa = ano.getText();
-				Musica musica = new Musica(caminho, tituloa, descricaoa, generoa, idiomaa, autoresa, interpretesa, duracaoa, anoa);
-				Main.instancia().AdicionarMusica(musica);
-				System.out.println(musica);
-				avisoSucesso();
-				Main.instancia().salvarMusica();
-				acaobotaovoltar();
-				limpaCampos();
-			} else if (foto.isSelected()) {
-				String caminho, tituloa, descricaoa, fotografoa, pessoasa, locala, dataa;
-				caminho = caminhoarquivo.getText();
-				tituloa = titulo.getText();
-				descricaoa = descricao.getText();
-				fotografoa = genero.getText();
-				pessoasa = idioma.getText();
-				locala = autores.getText();
-				dataa = interpretes.getText();
-				Foto foto = new Foto(caminho, tituloa, descricaoa, fotografoa, pessoasa, locala, dataa);
-				Main.instancia().AdicionarFoto(foto);
-				System.out.println(foto);
-				avisoSucesso();
-				Main.instancia().salvarFoto();
-				acaobotaovoltar();
-				limpaCampos();
 
-			} else if (!filme.isSelected()) {
-				avisoMidia();
-			} else if (!musica.isSelected()) {
-				avisoMidia();
-			} else if (!foto.isSelected()) {
-				avisoMidia();
-			}
-		} else {
-			alert.setTitle("Atenção");
-			alert.setContentText("Preencha todos os campos para poder salvar");
-			alert.setHeaderText(null);
-			alert.showAndWait();
+		if (filme.isSelected()) {
+			cadastroFilme();
+		} else if (musica.isSelected()) {
+			cadastroMusica();
+		} else if (foto.isSelected()) {
+			cadastroFoto();
+		} else if (!filme.isSelected()) {
+			avisoMidia();
+		} else if (!musica.isSelected()) {
+			avisoMidia();
+		} else if (!foto.isSelected()) {
+			avisoMidia();
 		}
 	}
 
@@ -136,6 +76,7 @@ public class CadastroController {
 		Main.changeScene("main");
 		retiraSelecao();
 		resetaPosicao();
+		limpaCampos();
 	}
 
 	// Quando realiza a escolha de um radio button essa função é chamada e reliza
@@ -150,14 +91,13 @@ public class CadastroController {
 			duracao.setVisible(false);
 			anoid.setVisible(false);
 			ano.setVisible(false);
-
 		} else if (filme.isSelected()) {
-			autoresid.setText("Diretor");
-			interpretesid.setText("Atores Principais");
-		} else if (!foto.isSelected()) {
 			resetaPosicao();
-
+			autoresid.setText("Diretor");
 		} else if (musica.isSelected()) {
+			resetaPosicao();
+			interpretesid.setText("Intepretes");
+		} else if (!foto.isSelected()){
 			resetaPosicao();
 		}
 	}
@@ -167,7 +107,7 @@ public class CadastroController {
 		generoid.setText("Genêro");
 		idiomaid.setText("Idioma");
 		autoresid.setText("Autores");
-		interpretesid.setText("Intépretes");
+		interpretesid.setText("Atores Principais");
 		duracaoid.setVisible(true);
 		duracao.setVisible(true);
 		anoid.setVisible(true);
@@ -180,7 +120,14 @@ public class CadastroController {
 		musica.setSelected(false);
 		foto.setSelected(false);
 	}
-
+	//aviso generico
+	public void avisoErro(String a) {
+		Alert alert = new Alert(Alert.AlertType.WARNING);
+		alert.setTitle("Atenção");
+		alert.setContentText(a);
+		alert.setHeaderText(null);
+		alert.showAndWait();
+	}
 	// avisa para ser escolhido um tipo de midia
 	public void avisoMidia() {
 		Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -204,7 +151,10 @@ public class CadastroController {
 	public void EscolhaCaminho() {
 		FileChooser fc = new FileChooser();
 		fc.setTitle("Escolha o arquivo");
-		fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("ALL FILES", "*.*"));
+		fc.getExtensionFilters().addAll(  new FileChooser.ExtensionFilter("ALL FILES", "*.*"),
+	            new FileChooser.ExtensionFilter("Foto", "*.png",".jpg", "*.gif"),
+	            new FileChooser.ExtensionFilter("Filme", "*.avi",".mp4",".wmv"),
+	            new FileChooser.ExtensionFilter("Musica", "*.mp3","*.mva","*.wav"));
 		File file = fc.showOpenDialog(null);
 
 		if (file != null) {
@@ -215,7 +165,7 @@ public class CadastroController {
 			System.out.println("error");
 		}
 	}
-	
+
 	public void limpaCampos() {
 		caminhoarquivo.setText(null);
 		titulo.setText(null);
@@ -226,5 +176,78 @@ public class CadastroController {
 		interpretes.setText(null);
 		duracao.setText(null);
 		ano.setText(null);
+	}
+
+	public void cadastroFilme() {
+		if (!titulo.getText().isEmpty() && !caminhoarquivo.getText().isEmpty() && !descricao.getText().isEmpty()
+				&& !genero.getText().isEmpty() && !idioma.getText().isEmpty() && !autores.getText().isEmpty()
+				&& !interpretes.getText().isEmpty() && !duracao.getText().isEmpty() && !ano.getText().isEmpty() ) {
+			String caminho, tituloa, descricaoa, generoa, idiomaa, diretora, atoresa, duracaoa, anoa;
+			caminho = caminhoarquivo.getText();
+			tituloa = titulo.getText();
+			descricaoa = descricao.getText();
+			generoa = genero.getText();
+			idiomaa = idioma.getText();
+			diretora = autores.getText();
+			atoresa = interpretes.getText();
+			duracaoa = duracao.getText();
+			anoa = ano.getText();
+			Filme filme = new Filme(caminho, tituloa, descricaoa, generoa, idiomaa, diretora, atoresa, duracaoa, anoa);
+			Main.instancia().AdicionarFilme(filme);
+			System.out.println(filme);
+			avisoSucesso();
+			Main.instancia().salvarFilme();
+			acaobotaovoltar();
+		}else {
+			avisoErro("Preencha todos os campos de filme para poder salvar");
+		}
+	}
+
+	public void cadastroMusica() {
+		if (!titulo.getText().isEmpty() && !caminhoarquivo.getText().isEmpty() && !descricao.getText().isEmpty()
+				&& !genero.getText().isEmpty() && !idioma.getText().isEmpty() && !autores.getText().isEmpty()
+				&& !interpretes.getText().isEmpty() && !ano.getText().isEmpty() && !duracao.getText().isEmpty()) {
+			String caminho, tituloa, descricaoa, generoa, idiomaa, autoresa, interpretesa, duracaoa, anoa;
+			caminho = caminhoarquivo.getText();
+			tituloa = titulo.getText();
+			descricaoa = descricao.getText();
+			generoa = genero.getText();
+			idiomaa = idioma.getText();
+			autoresa = autores.getText();
+			interpretesa = interpretes.getText();
+			duracaoa = duracao.getText();
+			anoa = ano.getText();
+			Musica musica = new Musica(caminho, tituloa, descricaoa, generoa, idiomaa, autoresa, interpretesa, duracaoa,
+					anoa);
+			Main.instancia().AdicionarMusica(musica);
+			System.out.println(musica);
+			avisoSucesso();
+			Main.instancia().salvarMusica();
+			acaobotaovoltar();
+		}else {
+			avisoErro("Preencha todos os campos de musica para poder salvar");
+		}
+	}
+
+	public void cadastroFoto() {
+		if (!titulo.getText().isEmpty() && !caminhoarquivo.getText().isEmpty() && !descricao.getText().isEmpty()
+				&& !genero.getText().isEmpty() && !idioma.getText().isEmpty() && !autores.getText().isEmpty()) {
+			String caminho, tituloa, descricaoa, fotografoa, pessoasa, locala, dataa;
+			caminho = caminhoarquivo.getText();
+			tituloa = titulo.getText();
+			descricaoa = descricao.getText();
+			fotografoa = genero.getText();
+			pessoasa = idioma.getText();
+			locala = autores.getText();
+			dataa = interpretes.getText();
+			Foto foto = new Foto(caminho, tituloa, descricaoa, fotografoa, pessoasa, locala, dataa);
+			Main.instancia().AdicionarFoto(foto);
+			System.out.println(foto);
+			avisoSucesso();
+			Main.instancia().salvarFoto();
+			acaobotaovoltar();
+		} else{
+			avisoErro("Preencha todos os campos de foto para poder salvar");
+		}
 	}
 }
