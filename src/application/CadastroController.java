@@ -61,7 +61,7 @@ public class CadastroController {
 
 	public void acaobotaosalvar() {
 		Alert alert = new Alert(Alert.AlertType.WARNING);
-		if (!titulo.getText().isEmpty()) {
+		if (!titulo.getText().isEmpty() && caminhoarquivo.getText().isEmpty() && descricao.getText().isEmpty() && genero.getText().isEmpty() && idioma.getText().isEmpty() && autores.getText().isEmpty() && ano.getText().isEmpty() && duracao.getText().isEmpty() ) {
 			if (filme.isSelected()) {
 				String caminho, tituloa, descricaoa, generoa, idiomaa, diretora, atoresa, duracaoa, anoa;
 				caminho = caminhoarquivo.getText();

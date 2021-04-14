@@ -63,17 +63,17 @@ public class EditaController {
 		Alert alert = new Alert(Alert.AlertType.WARNING);
 			if(!titulo.getText().isEmpty()) {
 				if(filme.isSelected()) {
-					salvarFilme();
+					salvarFilmeEd();
 					Main.instancia().salvarFilme();
 					avisoSucesso();
 					acaobotaovoltar();
 				}else if (musica.isSelected()) {
-					salvarMusica();
+					salvarMusicaEd();
 					Main.instancia().salvarMusica();
 					avisoSucesso();
 					acaobotaovoltar();
 				}else if(foto.isSelected())	{
-					salvarFoto();
+					salvarFotoEd();
 					Main.instancia().salvarFoto();
 					avisoSucesso();					
 					acaobotaovoltar();
@@ -97,12 +97,13 @@ public class EditaController {
 		if(!edita.getText().isEmpty()) {
 			if(filme.isSelected()) {
 				pesquisaFilme();
-				
+			
 			}else if (musica.isSelected()) {
 				pesquisaMusica();
-	
+			
 			}else if(foto.isSelected())	{		
 			    pesquisaFoto();
+			  
 			}else if(!filme.isSelected()) {
 				avisoMidia();
 			}else if(!musica.isSelected()) {
@@ -134,7 +135,7 @@ public class EditaController {
 		ano.setText(midia.getAno());
 	}
 	
-	public void salvarFilme() {
+	public void salvarFilmeEd() {
 		Filme midia;
 		midia = Main.instancia().edicaoFilme(edita.getText());
 		midia.setCaminhoArquivo(caminhoarquivo.getText());
@@ -146,6 +147,7 @@ public class EditaController {
 		midia.setAtoresPrincipais(interpretes.getText());
 		midia.setDuracao(duracao.getText());
 		midia.setAno(ano.getText());
+		
 	}
 	
 	public void pesquisaMusica() {
@@ -164,7 +166,7 @@ public class EditaController {
 		ano.setText(m.getAno());
 	}
 	
-	public void salvarMusica() {
+	public void salvarMusicaEd() {
 		Musica m = null ;
 		m = Main.instancia().edicaoMusica(edita.getText());
 		m.setCaminhoArquivo(caminhoarquivo.getText());
@@ -193,7 +195,7 @@ public class EditaController {
 		
 	}
 	
-	public void salvarFoto() {
+	public void salvarFotoEd() {
 		Foto mid;
 		mid = Main.instancia().edicaoFoto(edita.getText());
 		mid.setCaminhoArquivo(caminhoarquivo.getText());
@@ -224,15 +226,21 @@ public class EditaController {
 			duracao.setVisible(false);
 			anoid.setVisible(false);
 			ano.setVisible(false);
-			
+			limpaCampos();
 		}else if(filme.isSelected()) {
+			resetaPosicao();
 			autoresid.setText("Diretor");
 			interpretesid.setText("Atores Principais");
+		
+			limpaCampos();
+		}else if(musica.isSelected()) {
+			resetaPosicao();	
+			limpaCampos();
+		
 		}else if (!foto.isSelected()) {
 			resetaPosicao();
 			
-		}else if(musica.isSelected()) {
-			resetaPosicao();	
+		
 		}
 	}
 	//Reseta os campos e nomes para padrão quando der o salvar midia ou voltar
@@ -295,6 +303,7 @@ public class EditaController {
 	}
 	
 	public void limpaCampos() {
+		edita.setText(null);
 		caminhoarquivo.setText(null);
 		titulo.setText(null);
 		descricao.setText(null);
