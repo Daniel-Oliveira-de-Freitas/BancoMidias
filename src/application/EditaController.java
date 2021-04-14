@@ -93,8 +93,8 @@ public class EditaController {
 	}
 	
 	public void acaobotaoeditar() {
-		Alert alert = new Alert(Alert.AlertType.WARNING);
-		
+		try {
+		if(!edita.getText().isEmpty()) {
 			if(filme.isSelected()) {
 				pesquisaFilme();
 				
@@ -110,17 +110,19 @@ public class EditaController {
 			}else if(!foto.isSelected()) {
 				avisoMidia();
 			}
-		else {
-			alert.setTitle("Atenção");
-			alert.setContentText("Preencha todos os campos para poder salvar");
-			alert.setHeaderText(null);
-			alert.showAndWait();
+			}else {
+			avisoErro("Preencha o campo para pesquisar");
 			}
+		}catch(NullPointerException e) {
+			avisoErro(e.getMessage());
+		}
 	}
 	
 	public void pesquisaFilme() {
 		Filme midia;
 		midia = Main.instancia().edicaoFilme(edita.getText());
+		if (midia == null) {
+			throw new NullPointerException("O tipo de filme procurado não existe") ;}
 		caminhoarquivo.setText(midia.getCaminhoArquivo());
 		titulo.setText(midia.getTitulo());
 		descricao.setText(midia.getDescricao());
@@ -133,7 +135,7 @@ public class EditaController {
 	}
 	
 	public void salvarFilme() {
-		Filme midia = null ;
+		Filme midia;
 		midia = Main.instancia().edicaoFilme(edita.getText());
 		midia.setCaminhoArquivo(caminhoarquivo.getText());
 		midia.setTitulo(titulo.getText());
@@ -149,6 +151,8 @@ public class EditaController {
 	public void pesquisaMusica() {
 		Musica m;
 		m = Main.instancia().edicaoMusica(edita.getText());
+		if (m == null) {
+			throw new NullPointerException("O tipo de musica procurada não existe") ;}
 		caminhoarquivo.setText(m.getCaminhoArquivo());
 		titulo.setText(m.getTitulo());
 		descricao.setText(m.getDescricao());
@@ -177,6 +181,8 @@ public class EditaController {
 	public void pesquisaFoto() {
 		Foto mid;
 		mid = Main.instancia().edicaoFoto(edita.getText());
+		if (mid == null) {
+			throw new NullPointerException("O tipo de foto procurado não existe") ;}
 		caminhoarquivo.setText(mid.getCaminhoArquivo());
 		titulo.setText(mid.getTitulo());
 		descricao.setText(mid.getDescricao());
@@ -188,7 +194,7 @@ public class EditaController {
 	}
 	
 	public void salvarFoto() {
-		Foto mid = null ;
+		Foto mid;
 		mid = Main.instancia().edicaoFoto(edita.getText());
 		mid.setCaminhoArquivo(caminhoarquivo.getText());
 		mid.setTitulo(titulo.getText());
@@ -247,7 +253,6 @@ public class EditaController {
 		foto.setSelected(false);
 	}
 	
-	
 	//avisa para ser escolhido um tipo de midia
 	public void avisoMidia() {
 		Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -266,6 +271,13 @@ public class EditaController {
 		alert.showAndWait();
 	}
 	
+	public void avisoErro(String e) {
+		Alert alert = new Alert(Alert.AlertType.WARNING);
+		alert.setTitle("Atenção");
+		alert.setContentText(e);
+		alert.setHeaderText(null);
+		alert.showAndWait();
+	}
 	//Quando clica em cima do botao ao lado da caixa de texto de caminho de arquivo abre outra janela
 	public void EscolhaCaminho() {
 		FileChooser fc = new FileChooser();
@@ -278,7 +290,7 @@ public class EditaController {
 		    	caminhoarquivo.setText(file.getAbsolutePath());
 
 		    } else  {
-		        System.out.println("error");
+		        System.out.println("erro ao encontrar o arquivo");
 		    }
 	}
 	
