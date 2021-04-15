@@ -14,7 +14,8 @@ public class ProcessamentoMidia {
 		filmes.add(filme);
 	}
 	
-	public Filme edicaoFilme(String t) {
+	public Filme edicaoFilme(String t)throws NullPointerException {
+		
         for(Filme filmesb: filmes) {
                if(t.equals(filmesb.getTitulo())) {
                    return filmesb;

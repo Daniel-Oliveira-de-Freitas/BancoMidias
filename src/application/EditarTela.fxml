@@ -56,14 +56,14 @@
             <TextField fx:id="ano" layoutX="586.0" layoutY="287.0" />
             <Label fx:id="anoid" layoutX="582.0" layoutY="266.0" text="Ano" textFill="#0d0d0d" />
             <Button layoutX="93.0" layoutY="315.0" mnemonicParsing="false" onAction="#acaobotaosalvar" prefHeight="50.0" prefWidth="176.0" style="-fx-background-color: #4B83F2; -fx-background-radius: 15;" text="Salvar Mídia" textFill="#0d0d0d" />
-            <TextField fx:id="edita" layoutX="94.0" layoutY="220.0" prefHeight="25.0" prefWidth="181.0" />
-            <Label layoutX="116.0" layoutY="194.0" prefHeight="17.0" prefWidth="170.0" text="Digite o nome ou código" textFill="#171717">
+            <TextField fx:id="edita" layoutX="93.0" layoutY="218.0" prefHeight="25.0" prefWidth="181.0" />
+            <Label layoutX="140.0" layoutY="194.0" prefHeight="19.0" prefWidth="88.0" text="Digite o nome " textFill="#171717">
                <font>
                   <Font size="13.0" />
                </font>
             </Label>
             <Button layoutX="533.0" layoutY="119.0" mnemonicParsing="false" onAction="#EscolhaCaminho" prefHeight="25.0" prefWidth="26.0" text="Button" />
-            <Button layoutX="96.0" layoutY="250.0" mnemonicParsing="false" onAction="#acaobotaoeditar" prefHeight="50.0" prefWidth="176.0" style="-fx-background-radius: 15; -fx-background-color: #4B83F2;" text="Pesquisar" />
+            <Button layoutX="94.0" layoutY="250.0" mnemonicParsing="false" onAction="#acaobotaoeditar" prefHeight="50.0" prefWidth="176.0" style="-fx-background-radius: 15; -fx-background-color: #4B83F2;" text="Pesquisar" />
          </children>
       </Pane>
    </children>

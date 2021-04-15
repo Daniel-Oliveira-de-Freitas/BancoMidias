@@ -183,6 +183,25 @@ public class ExcluirController {
 			alert.setHeaderText(null);
 			alert.showAndWait();
 		}
+		
+		public void acaoEscolha() {
+			if (fotoid.isSelected()) {
+				tabelaFoto();
+				tabelam.setVisible(false);
+				tabela.setVisible(true);
+				tabelaf.setVisible(false);
+			} else if (musicaid.isSelected()) {
+				tabelaMusica();
+				tabelam.setVisible(true);
+				tabela.setVisible(false);
+				tabelaf.setVisible(false);
+			} else if (filmeid.isSelected()) {
+				tabelaFilme();
+				tabelaf.setVisible(true);
+				tabelam.setVisible(false);
+				tabela.setVisible(false);
+			}
+		}
 
 	public void acaobotaovoltar() {
 		Main.changeScene("main");

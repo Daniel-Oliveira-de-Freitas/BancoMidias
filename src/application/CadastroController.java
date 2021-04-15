@@ -91,12 +91,15 @@ public class CadastroController {
 			duracao.setVisible(false);
 			anoid.setVisible(false);
 			ano.setVisible(false);
+			limpaCampos();
 		} else if (filme.isSelected()) {
 			resetaPosicao();
 			autoresid.setText("Diretor");
+		    limpaCampos();
 		} else if (musica.isSelected()) {
 			resetaPosicao();
 			interpretesid.setText("Intepretes");
+			limpaCampos();
 		} else if (!foto.isSelected()){
 			resetaPosicao();
 		}

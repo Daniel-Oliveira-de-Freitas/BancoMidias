@@ -18,8 +18,8 @@ public class PesquisaController {
 	
 	public void acaobotaovoltar(){
 		Main.changeScene("main");
-}
-	
+		barradepesquisa.setText(null);
+	}
 	public void acaobotaopesquisar() {
 	if(!barradepesquisa.getText().isEmpty()) {
 		if (fotoid.isSelected()) {
