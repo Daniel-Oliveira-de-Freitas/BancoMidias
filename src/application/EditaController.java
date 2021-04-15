@@ -76,7 +76,7 @@ public class EditaController {
 				avisoMidia();
 			}
 		} catch (NullPointerException e) {
-			avisoErro("Midia não existente");
+			avisoErro("Não foi possivel salvar");
 		}
 	}
 
@@ -100,7 +100,7 @@ public class EditaController {
 				avisoMidia();
 			}
 		} catch (NullPointerException e) {
-			avisoErro("Barra de pesquisa vazia");
+			avisoErro("Midia inexistente no sistema");
 		}
 	}
 
@@ -116,31 +116,29 @@ public class EditaController {
 		interpretes.setText(midia.getAtoresPrincipais());
 		duracao.setText(midia.getDuracao());
 		ano.setText(midia.getAno());
-	}
+		}
 
 	public void salvarFilmeEd() {
 		Filme midia;
 		midia = Main.instancia().edicaoFilme(edita.getText());
-		if (!titulo.getText().isEmpty() && !caminhoarquivo.getText().isEmpty() && !descricao.getText().isEmpty()
+		if (!caminhoarquivo.getText().isEmpty() && !titulo.getText().isEmpty() && !descricao.getText().isEmpty()
 				&& !genero.getText().isEmpty() && !idioma.getText().isEmpty() && !autores.getText().isEmpty()
 				&& !interpretes.getText().isEmpty() && !duracao.getText().isEmpty() && !ano.getText().isEmpty()) {
 			midia.setCaminhoArquivo(caminhoarquivo.getText());
 			midia.setTitulo(titulo.getText());
 			midia.setDescricao(descricao.getText());
-			midia.setDuracao(duracao.getText());
 			midia.setGenero(genero.getText());
 			midia.setIdioma(idioma.getText());
 			midia.setDiretor(autores.getText());
 			midia.setAtoresPrincipais(interpretes.getText());
-			midia.setDiretor(duracao.getText());
+			midia.setDuracao(duracao.getText());
 			midia.setAno(ano.getText());
 			Main.instancia().salvarFilme();
 			avisoSucesso();
 			acaobotaovoltar();
 
 		} else {
-
-			avisoErro("Midia não pode ser salva");
+			avisoErro("Não foi possivel salvar");
 		}
 	}
 
@@ -176,8 +174,6 @@ public class EditaController {
 			Main.instancia().salvarMusica();
 			avisoSucesso();
 			acaobotaovoltar();
-		} else {
-			avisoErro("Midia não pode ser salva");
 		}
 	}
 
@@ -215,8 +211,6 @@ public class EditaController {
 			Main.instancia().salvarFoto();
 			avisoSucesso();
 			acaobotaovoltar();
-		} else {
-			avisoErro("Midia não pode ser salva");
 		}
 
 	}

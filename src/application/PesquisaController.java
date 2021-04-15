@@ -18,7 +18,7 @@ public class PesquisaController {
 	
 	public void acaobotaovoltar(){
 		Main.changeScene("main");
-		barradepesquisa.setText(null);
+		barradepesquisa.setText("");;
 	}
 	public void acaobotaopesquisar() {
 	if(!barradepesquisa.getText().isEmpty()) {

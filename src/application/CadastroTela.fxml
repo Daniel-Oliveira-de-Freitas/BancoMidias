@@ -11,13 +11,13 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #25294B;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CadastroController">
+<AnchorPane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #25294B;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CadastroController">
    <children>
       <Pane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #87CEFA;">
          <children>
             <ImageView fitHeight="688.0" fitWidth="750.0" layoutX="211.0" layoutY="-124.0">
                <image>
-                  <Image url="@../../../../../Creative%20Cloud%20Files/Retângulo%2038.png" />
+                  <Image url="@../../imagens/Retângulo%2038.png" />
                </image>
             </ImageView>
             <Button layoutX="165.0" layoutY="27.0" mnemonicParsing="false" onAction="#EscolhaCaminho" prefHeight="25.0" prefWidth="22.0" text="..." />

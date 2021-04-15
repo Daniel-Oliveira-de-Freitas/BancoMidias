@@ -11,13 +11,13 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EditaController">
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EditaController">
    <children>
       <Pane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #87CEFA;">
          <children>
             <ImageView fitHeight="885.0" fitWidth="836.0" layoutX="121.0" layoutY="-175.0">
                <image>
-                  <Image url="@../../../../../Creative%20Cloud%20Files/Retângulo%2038.png" />
+                  <Image url="@../../imagens/Retângulo%2038.png" />
                </image>
             </ImageView>
             <Label layoutX="335.0" layoutY="11.0" prefHeight="70.0" prefWidth="181.0" text="Editar" textFill="#171717">

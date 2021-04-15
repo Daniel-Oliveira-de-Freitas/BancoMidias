@@ -4,13 +4,7 @@ package application;
 	private String caminhoArquivo;
 	private String titulo;
 	private String descricao;
-
-	 Midia(String t ) {
-		caminhoArquivo = "";
-		titulo = t;
-		descricao = "";
-	 }
-		
+	
 	public Midia(String caminhoArquivo, String titulo, String descricao ) {
 		this.caminhoArquivo = caminhoArquivo;
 		this.titulo = titulo;
