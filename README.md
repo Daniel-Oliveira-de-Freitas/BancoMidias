@@ -2,7 +2,7 @@
 
 Profa. Aline Mello 
 
-> Status do projeto: :x: em andamento :rage1:
+> Status do projeto: :x: Finalizado :
 
 @author Cassio 
 
