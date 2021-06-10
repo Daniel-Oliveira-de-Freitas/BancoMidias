@@ -79,11 +79,11 @@ public class CadastroController {
 		limpaCampos();
 	}
 
-	// Quando realiza a escolha de um radio button essa função é chamada e reliza
-	// sua função escolhida
+	// Quando realiza a escolha de um radio button essa funï¿½ï¿½o ï¿½ chamada e reliza
+	// sua funï¿½ï¿½o escolhida
 	public void acaoescolha() {
 		if (foto.isSelected()) {
-			generoid.setText("Fotógrafo");
+			generoid.setText("Fotï¿½grafo");
 			idiomaid.setText("Pessoas");
 			autoresid.setText("Local");
 			interpretesid.setText("Data");
@@ -105,9 +105,9 @@ public class CadastroController {
 		}
 	}
 
-	// Reseta os campos e nomes para padrão quando der o salvar midia ou voltar
+	// Reseta os campos e nomes para padrï¿½o quando der o salvar midia ou voltar
 	public void resetaPosicao() {
-		generoid.setText("Genêro");
+		generoid.setText("Genï¿½ro");
 		idiomaid.setText("Idioma");
 		autoresid.setText("Autores");
 		interpretesid.setText("Atores Principais");
@@ -117,7 +117,7 @@ public class CadastroController {
 		ano.setVisible(true);
 	}
 
-	// retira a seleção dos radio buttons
+	// retira a seleï¿½ï¿½o dos radio buttons
 	public void retiraSelecao() {
 		filme.setSelected(false);
 		musica.setSelected(false);
@@ -126,7 +126,7 @@ public class CadastroController {
 	//aviso generico
 	public void avisoErro(String a) {
 		Alert alert = new Alert(Alert.AlertType.WARNING);
-		alert.setTitle("Atenção");
+		alert.setTitle("Atenï¿½ï¿½o");
 		alert.setContentText(a);
 		alert.setHeaderText(null);
 		alert.showAndWait();
@@ -134,23 +134,21 @@ public class CadastroController {
 	// avisa para ser escolhido um tipo de midia
 	public void avisoMidia() {
 		Alert alert = new Alert(Alert.AlertType.WARNING);
-		alert.setTitle("Atenção");
+		alert.setTitle("Atenï¿½ï¿½o");
 		alert.setContentText("Selecione um tipo de midia");
 		alert.setHeaderText(null);
 		alert.showAndWait();
 	}
 
-	// avisa que a operação foi salva com sucesso
+	// avisa que a operaï¿½ï¿½o foi salva com sucesso
 	public void avisoSucesso() {
 		Alert alert = new Alert(Alert.AlertType.INFORMATION);
-		alert.setTitle("Atenção");
+		alert.setTitle("Atenï¿½ï¿½o");
 		alert.setContentText("Salvo com sucesso");
 		alert.setHeaderText(null);
 		alert.showAndWait();
 	}
 
-	// Quando clica em cima do botao ao lado da caixa de texto de caminho de arquivo
-	// abre outra janela
 	public void EscolhaCaminho() {
 		FileChooser fc = new FileChooser();
 		fc.setTitle("Escolha o arquivo");
@@ -161,7 +159,7 @@ public class CadastroController {
 		File file = fc.showOpenDialog(null);
 
 		if (file != null) {
-			// nome do text field que esta associado
+			
 			caminhoarquivo.setText(file.getAbsolutePath());
 
 		} else {
