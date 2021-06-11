@@ -39,7 +39,7 @@ public class Main extends Application {
 		Pane fxmledita = FXMLLoader.load(getClass().getResource("EditarTela.fxml"));
 		   editaScene = new Scene(fxmledita);
 		   
-	    Pane fxmlpesquisa = FXMLLoader.load(getClass().getResource("pesquisarTela.fxml"));
+	    Pane fxmlpesquisa = FXMLLoader.load(getClass().getResource("PesquisarTela.fxml"));
 		   pesquisaScene = new Scene(fxmlpesquisa);   
 	
 		 Pane fxmlexibir = FXMLLoader.load(getClass().getResource("ExibirTela.fxml"));
