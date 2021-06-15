@@ -18,7 +18,7 @@
          <children>
             <ImageView fitHeight="709.0" fitWidth="727.0" layoutX="233.0" layoutY="-89.0">
                <image>
-                  <Image url="file:///F:/Apps/BancoMidias/imagens/Retangulo38.png" />
+                  <Image url="file:///C:/Apps/BancoMidias/imagens/Retangulo38.png" />
                </image>
             </ImageView>
             <Label layoutX="325.0" layoutY="-4.0" prefHeight="93.0" prefWidth="244.0" text="Excluir" textFill="#222222">

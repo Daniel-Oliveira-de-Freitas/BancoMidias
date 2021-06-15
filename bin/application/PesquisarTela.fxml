@@ -18,7 +18,7 @@
          <children>
             <ImageView fitHeight="760.0" fitWidth="782.0" layoutX="185.0" layoutY="-99.0">
                <image>
-                  <Image url="file:///F:/Apps/BancoMidias/imagens/Retangulo38.png" />
+                  <Image url="file:///C:/Apps/BancoMidias/imagens/Retangulo38.png" />
                </image>
             </ImageView>
             <Button fx:id="botaPesquisa" layoutX="581.0" layoutY="251.0" mnemonicParsing="false" onAction="#acaobotaopesquisar" prefHeight="25.0" prefWidth="26.0" text="P" />
@@ -37,12 +37,12 @@
             </Label>
             <ImageView fitHeight="100.0" fitWidth="274.0" layoutX="274.0" layoutY="124.0">
                <image>
-                  <Image url="file:///F:/Apps/BancoMidias/imagens/filmes.png" />
+                  <Image url="file:///C:/Apps/BancoMidias/imagens/filmes.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="116.0" fitWidth="175.0" layoutX="60.0" layoutY="118.0">
                <image>
-                  <Image url="file:///F:/Apps/BancoMidias/imagens/fotos.png" />
+                  <Image url="file:///C:/Apps/BancoMidias/imagens/fotos.png" />
                </image>
             </ImageView>
             <Label layoutX="324.0" layoutY="319.0" text="Escolha seu tipo de midia:" textFill="#1e1d1d">
@@ -58,7 +58,7 @@
             <RadioButton fx:id="filmeid" layoutX="467.0" layoutY="363.0" mnemonicParsing="false" text="Filme" textFill="#1e1d1d" toggleGroup="$TipoMidia" />
             <ImageView fitHeight="116.0" fitWidth="175.0" layoutX="585.0" layoutY="122.0">
                <image>
-                  <Image url="file:///F:/Apps/BancoMidias/imagens/Imagem1.png" />
+                  <Image url="file:///C:/Apps/BancoMidias/imagens/Imagem1.png" />
                </image>
             </ImageView>
          </children>

@@ -17,7 +17,7 @@
          <children>
             <ImageView fitHeight="688.0" fitWidth="750.0" layoutX="211.0" layoutY="-124.0">
                <image>
-                  <Image url="file:///F:/Apps/BancoMidias/imagens/Retangulo38.png" />
+                  <Image url="file:///C:/Apps/BancoMidias/imagens/Retangulo38.png" />
                </image>
             </ImageView>
             <Button layoutX="165.0" layoutY="27.0" mnemonicParsing="false" onAction="#EscolhaCaminho" prefHeight="25.0" prefWidth="22.0" text="..." />

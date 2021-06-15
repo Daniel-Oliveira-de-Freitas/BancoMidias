@@ -14,7 +14,7 @@
          <children>
             <ImageView fitHeight="734.0" fitWidth="648.0" layoutX="260.0" layoutY="-117.0">
                <image>
-                  <Image url="file:///F:/Apps/BancoMidias/imagens/rolofilme.png" />
+                  <Image url="file:///C:/Apps/BancoMidias/imagens/rolofilme.png" />
                </image>
             </ImageView>
             <Button layoutX="219.0" layoutY="231.0" mnemonicParsing="false" onAction="#acaobotaoeditar" prefHeight="43.0" prefWidth="102.0" text="Editar" />
